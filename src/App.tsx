@@ -12,7 +12,10 @@ import {
   FileUp,
   FileText,
   Link as LinkIcon,
-  Save
+  Save,
+  Twitter,
+  Linkedin,
+  Mail
 } from 'lucide-react';
 
 // Minimal placeholder SVG for icons
@@ -232,16 +235,17 @@ function App() {
           </div>
           <div className="flex gap-4">
             {/* Social icon placeholders */}
-            <a href="#" aria-label="Twitter" className="hover:opacity-70 transition-opacity duration-200 ease-in-out">
-              <svg width={20} height={20} fill="currentColor" className="text-white"><path d="M19.6,4.6c-0.5,0.2-0.9,0.3-1.4,0.4c0.5-0.3,0.9-0.8,1.1-1.3c-0.5,0.3-1,0.6-1.6,0.7c-0.5-0.5-1.3-0.8-2-0.8 c-1.5,0-2.5,1.4-2.2,2.8C7.7,6.2,4.1,4.5,1.7,1.9c-0.4,0.7-0.2,1.5,0.4,2c-0.4,0-0.7-0.1-1-0.3C1.1,5.3,2,6.3,3.3,6.6 c-0.3,0.1-0.6,0.1-0.8,0c0.2,0.7,0.9,1.2,1.7,1.2C3.2,8.8,2.3,9.1,1.4,9.1c-0.3,0-0.5,0-0.8-0.1C2.1,10.4,4.6,11.2,7.3,11.2 c8.5,0,13.2-7,12.9-13.4C18.4,5.2,19,5,19.6,4.6z"/></svg>
+            <a href="#" aria-label="Twitter" className="transition-all duration-200 ease-in-out hover:opacity-70 hover:scale-110">
+              <Twitter className="w-5 h-5 text-white" strokeWidth={2} />
             </a>
-            <a href="#" aria-label="LinkedIn" className="hover:opacity-70 transition-opacity duration-200 ease-in-out">
-              <svg width={20} height={20} fill="currentColor" className="text-white"><path d="M18.4 18.4h-3.2v-5.6c0-1.3 0-3-1.8-3-1.8 0-2.2 1.4-2.2 2.8v5.8H8V7.9h3v1.4h0c0.4-0.8 1.3-1.6 2.7-1.6 2.9 0 3.4 1.9 3.4 4.3V18.4zM4.2 6.6c-1 0-1.7-0.8-1.7-1.7 0-1 0.7-1.7 1.7-1.7s1.7 0.8 1.7 1.7c0 0.9-0.7 1.7-1.7 1.7zM6.3 18.4H2.1V7.9h4.2V18.4zM20 0H0v20h20V0z"/></svg>
+            <a href="#" aria-label="LinkedIn" className="transition-all duration-200 ease-in-out hover:opacity-70 hover:scale-110">
+              <Linkedin className="w-5 h-5 text-white" strokeWidth={2} />
             </a>
-            <a href="#" aria-label="Email" className="hover:opacity-70 transition-opacity duration-200 ease-in-out">
-              <svg width={20} height={20} fill="currentColor" className="text-white"><path d="M1.4,4.1l8.3,6.1c0.6,0.5,1.5,0.5,2.1,0l8.3-6.1C19.6,4.7,20,5.4,20,6.1v7.8c0,1-0.7,1.7-1.7,1.7H1.7C0.7,15.6,0,14.9,0,13.9V6.1C0,5.4,0.4,4.7,1.4,4.1z M10,10.7L1.4,4.1C1.7,3.6,2.5,3.2,3.3,3.2h13.4c0.8,0,1.6,0.4,1.9,0.9L10,10.7z"/></svg>
+            <a href="#" aria-label="Email" className="transition-all duration-200 ease-in-out hover:opacity-70 hover:scale-110">
+              <Mail className="w-5 h-5 text-white" strokeWidth={2} />
             </a>
           </div>
+          <div className="text-sm text-gray-400">© 2024 MAGNIFIC. Todos los derechos reservados.</div>
         </div>
       </footer>
     </div>
