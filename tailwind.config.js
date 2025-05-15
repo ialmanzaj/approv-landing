@@ -1,7 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     darkMode: ["class"],
-    content: ["./index.html", "./src/**/*.{ts,tsx,js,jsx}"],
+    content: [
+      './pages/**/*.{js,ts,jsx,tsx,mdx}',
+      './src/components/**/*.{js,ts,jsx,tsx,mdx}', // For components in src/components
+      './src/app/**/*.{js,ts,jsx,tsx,mdx}', // If using Next.js App Router in src/app
+      './src/**/*.{ts,tsx,js,jsx}' // Broader catch-all for other src files if needed
+    ],
   theme: {
   	extend: {
   		borderRadius: {

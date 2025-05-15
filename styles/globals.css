@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+  You'll need to ensure the PP Mori font files are available.
+  One way is to host them in your `public/fonts` directory 
+  and then define @font-face rules here. 
+
+  Example (adjust paths and font weights/styles as needed):
+
+@font-face {
+  font-family: 'PP Mori';
+  src: url('/fonts/PPMori-Regular.woff2') format('woff2'),
+       url('/fonts/PPMori-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Mori';
+  src: url('/fonts/PPMori-SemiBold.woff2') format('woff2'),
+       url('/fonts/PPMori-SemiBold.woff') format('woff');
+  font-weight: 600; // Example for semibold
+  font-style: normal;
+  font-display: swap;
+}
+
+*/
+
+body {
+  /* You can set a base font stack here if needed,
+     Tailwind will apply its defaults, and you can override with utility classes.
+     The fontFamily style is directly applied in your components for PP Mori currently.
+  */
+  font-family: Inter, sans-serif; /* A fallback font */
+}
+
+/* Example of extending Tailwind to include PP Mori in your font utility classes (optional) */
+/* In your tailwind.config.js:
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'], // Keep your default sans
+        mori: ['PP Mori', 'Inter', 'sans-serif'], // Add PP Mori
+      },
+    },
+  },
+Then you could use `font-mori` class instead of inline styles for PP Mori.
+*/ 
