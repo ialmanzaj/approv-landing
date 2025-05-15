@@ -15,7 +15,13 @@ import {
   Save,
   Twitter,
   Linkedin,
-  Mail
+  Mail,
+  Clock,
+  Folders,
+  ClipboardX,
+  Hourglass,
+  AlertTriangle,
+  Frown
 } from 'lucide-react';
 
 // Minimal placeholder SVG for icons
@@ -56,14 +62,14 @@ function App() {
   ];
 
   const features = [
-    { label: "Pasarela WhatsApp", Icon: MessageSquareText },
-    { label: "Registros de Auditoría", Icon: ClipboardList },
-    { label: "Alertas de Escalamiento", Icon: BellDot },
-    { label: "Flujos Personalizados", Icon: WorkflowIcon },
-    { label: "Notificaciones en Tiempo Real", Icon: Zap },
-    { label: "Gestión de Cumplimiento", Icon: ShieldCheck },
-    { label: "Panel de Control", Icon: LayoutDashboard },
-    { label: "Plantillas Inteligentes", Icon: CopyPlus }
+    { label: "Link por WhatsApp", Icon: MessageSquareText, desc: "Inicia y gestiona aprobaciones directo desde WhatsApp." },
+    { label: "Registros de Auditoría", Icon: ClipboardList, desc: "Trazabilidad completa de cada decisión y aprobación." },
+    { label: "Alertas de Escalamiento", Icon: BellDot, desc: "Notificaciones automáticas para asegurar respuestas a tiempo." },
+    { label: "Flujos Personalizados", Icon: WorkflowIcon, desc: "Adapta el proceso de aprobación a tus necesidades exactas." },
+    { label: "Notificaciones en Tiempo Real", Icon: Zap, desc: "Mantente informado al instante sobre cada avance." },
+    { label: "Gestión de Cumplimiento", Icon: ShieldCheck, desc: "Asegura el cumplimiento normativo sin esfuerzo." },
+    { label: "Panel de Control", Icon: LayoutDashboard, desc: "Visualiza y gestiona todas tus aprobaciones en un solo lugar." },
+    { label: "Plantillas Inteligentes", Icon: CopyPlus, desc: "Acelera la creación de solicitudes con plantillas predefinidas." }
   ];
 
   const workflowSteps = [
@@ -84,6 +90,39 @@ function App() {
       Icon: Save,
       title: "Magnific guarda todo automáticamente",
       desc: "Al aprobarse, se notifica al equipo, se genera un acta con nombres y fecha, y queda todo listo para respaldo o auditoría."
+    }
+  ];
+
+  const painPoints = [
+    {
+      Icon: Clock,
+      title: "Aprobaciones lentas y desorganizadas",
+      description: "“Mando un correo o mensaje en WhatsApp, y nadie responde por días.”"
+    },
+    {
+      Icon: Folders,
+      title: "Canales de comunicación dispersos",
+      description: "“Unas cosas llegan por WhatsApp, otras por correo, otras están en una hoja de Excel.”"
+    },
+    {
+      Icon: ClipboardX,
+      title: "Falta de trazabilidad y respaldo",
+      description: "“Si alguien me pregunta ‘¿quién aprobó esto?’, no tengo cómo demostrarlo.”"
+    },
+    {
+      Icon: Hourglass,
+      title: "Tiempo perdido en tareas repetitivas",
+      description: "“Paso horas persiguiendo firmas o respuestas.”"
+    },
+    {
+      Icon: AlertTriangle,
+      title: "Riesgo operativo y legal",
+      description: "“Se nos han pasado fechas de contratos porque nadie aprobó a tiempo.”"
+    },
+    {
+      Icon: Frown,
+      title: "Frustración del equipo y desgaste emocional",
+      description: "“Llego a la junta agotada por estar persiguiendo todo.”"
     }
   ];
 
@@ -111,31 +150,38 @@ function App() {
           <p className="text-lg text-[#afdafa] mt-6 max-w-xl text-center">
             Gestiona solicitudes de mantenimiento, aprobaciones de presupuesto y proveedores—todo en un solo flujo de trabajo impulsado por WhatsApp.
           </p>
-          <a
-            href="#demo"
-            className="mt-8 bg-white text-black px-8 py-4 rounded-full font-semibold text-lg transform transition-transform duration-300 ease-in-out hover:scale-105 shadow-lg"
-          >
-            Reserva una demo
-          </a>
+          <div className="flex flex-col items-center mt-8">
+            <a
+              href="#demo"
+              className="bg-white text-black px-8 py-4 rounded-full font-semibold text-lg transform transition-transform duration-300 ease-in-out hover:scale-105 shadow-lg"
+            >
+              Reserva una demo
+            </a>
+            <p className="text-sm text-[#afdafa] mt-2">Descubre cómo en 15 min.</p>
+          </div>
         </div>
       </section>
 
-      {/* FEATURE GRID */}
+      {/* PAIN POINTS SECTION */}
       <section className="max-w-screen-xl mx-auto px-4 py-16">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-2">
-          {features.map((feature, i) => (
+        <h2 className="text-3xl font-semibold text-[#000d49] text-center mb-12">¿Te Suenan Familiares Estos Problemas?</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {painPoints.map((pain, i) => (
             <div
               key={i}
-              className="bg-white rounded-2xl p-4 shadow-md flex flex-col items-center text-center group transform transition-all duration-300 ease-in-out hover:shadow-xl hover:-translate-y-1"
+              className="bg-white rounded-2xl p-6 shadow-md flex flex-col items-start text-left h-full border border-gray-100 hover:shadow-lg transition-shadow duration-300"
             >
-              <div className="w-12 h-12 flex items-center justify-center mb-3 text-indigo-600">
-                <feature.Icon className="w-8 h-8 group-hover:scale-110 transition-transform duration-300 ease-in-out" />
+              <div className="w-10 h-10 flex items-center justify-center mb-4 text-red-500 bg-red-100 rounded-lg">
+                <pain.Icon className="w-6 h-6" />
               </div>
-              <div className="text-sm font-medium text-gray-700">{feature.label}</div>
+              <h3 className="font-semibold text-lg mb-2 text-[#1e244d]">{pain.title}</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">{pain.description}</p>
             </div>
           ))}
         </div>
       </section>
+
+    
 
       {/* 3-STEP WORKFLOW SECTION */}
       <section className="max-w-screen-xl mx-auto px-4 py-16">
@@ -152,6 +198,24 @@ function App() {
               <div className="text-indigo-600 mb-2 font-bold text-sm">PASO {item.step}</div>
               <div className="font-semibold text-xl mb-3 text-[#1e244d]">{item.title}</div>
               <div className="text-gray-500 text-base max-w-xs leading-relaxed">{item.desc}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+        {/* FEATURE GRID */}
+        <section className="max-w-screen-xl mx-auto px-4 py-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-2">
+          {features.map((feature, i) => (
+            <div
+              key={i}
+              className="bg-white rounded-2xl p-4 shadow-md flex flex-col items-center text-center group transform transition-all duration-300 ease-in-out hover:shadow-xl hover:-translate-y-1 hover:scale-105"
+            >
+              <div className="w-12 h-12 flex items-center justify-center mb-3 text-indigo-600">
+                <feature.Icon className="w-8 h-8 group-hover:scale-110 transition-transform duration-300 ease-in-out" />
+              </div>
+              <div className="text-sm font-medium text-gray-700">{feature.label}</div>
+              <p className="text-xs text-gray-500 mt-1 px-2">{feature.desc}</p>
             </div>
           ))}
         </div>
@@ -245,7 +309,9 @@ function App() {
               <Mail className="w-5 h-5 text-white" strokeWidth={2} />
             </a>
           </div>
-          <div className="text-sm text-gray-400">© 2024 MAGNIFIC. Todos los derechos reservados.</div>
+        </div>
+        <div className="max-w-screen-xl mx-auto py-4 px-4 text-center text-xs text-gray-400 border-t border-gray-700">
+          © {new Date().getFullYear()} Magnific. Todos los derechos reservados.
         </div>
       </footer>
     </div>
