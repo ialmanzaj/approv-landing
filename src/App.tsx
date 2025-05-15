@@ -1,11 +1,25 @@
 import React, { useState } from "react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import {
+  MessageSquareText,
+  ClipboardList,
+  BellDot,
+  Workflow as WorkflowIcon,
+  Zap,
+  ShieldCheck,
+  LayoutDashboard,
+  CopyPlus,
+  FileUp,
+  FileText,
+  Link as LinkIcon,
+  Save
+} from 'lucide-react';
 
 // Minimal placeholder SVG for icons
 const PlaceholderIcon = ({ className }: { className?: string }) => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className={className}>
-    <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="1.5" fill="#ebf4ff" />
-    <path d="M8 12l2 2 4-4" stroke="#2563eb" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+  <svg viewBox="0 0 24 24" strokeWidth="1.5" fill="none" stroke="currentColor" className={className}>
+    <circle cx="12" cy="12" r="10" strokeWidth="1.5" />
+    <path d="M8 12l2 2 4-4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 );
 
@@ -38,13 +52,48 @@ function App() {
     }
   ];
 
+  const features = [
+    { label: "Pasarela WhatsApp", Icon: MessageSquareText },
+    { label: "Registros de Auditoría", Icon: ClipboardList },
+    { label: "Alertas de Escalamiento", Icon: BellDot },
+    { label: "Flujos Personalizados", Icon: WorkflowIcon },
+    { label: "Notificaciones en Tiempo Real", Icon: Zap },
+    { label: "Gestión de Cumplimiento", Icon: ShieldCheck },
+    { label: "Panel de Control", Icon: LayoutDashboard },
+    { label: "Plantillas Inteligentes", Icon: CopyPlus }
+  ];
+
+  const workflowSteps = [
+    {
+      step: '01',
+      Icon: FileText,
+      title: "Envío rápido por WhatsApp o correo",
+      desc: "Desde tu teléfono o computadora, mandas el documento que necesita aprobación (mantenimiento, gasto, proveedor, etc.)."
+    },
+    {
+      step: '02',
+      Icon: LinkIcon,
+      title: "Cada responsable recibe un enlace único",
+      desc: "Se abre el documento, se aprueba o se rechaza con un clic. No hace falta crear cuentas ni aprender nada nuevo."
+    },
+    {
+      step: '03',
+      Icon: Save,
+      title: "Magnific guarda todo automáticamente",
+      desc: "Al aprobarse, se notifica al equipo, se genera un acta con nombres y fecha, y queda todo listo para respaldo o auditoría."
+    }
+  ];
+
   return (
     <div className="min-h-screen w-full bg-[#f8fafc] font-sans">
       {/* HEADER */}
       <header className="bg-[#000d49] w-full">
         <div className="max-w-screen-xl mx-auto px-4 flex items-center justify-between py-6">
           <div className="text-white text-2xl font-bold tracking-tight" style={{ fontFamily: 'PP Mori, Inter, sans-serif' }}>MAGNIFIC</div>
-          <a href="#demo" className="bg-white text-black font-semibold px-6 py-3 rounded-full hover:scale-105 transition text-base shadow">
+          <a
+            href="#demo"
+            className="bg-white text-black font-semibold px-6 py-3 rounded-full transform transition-transform duration-300 ease-in-out hover:scale-105 text-base shadow"
+          >
             Solicita una demo
           </a>
         </div>
@@ -61,7 +110,7 @@ function App() {
           </p>
           <a
             href="#demo"
-            className="mt-8 bg-white text-black px-8 py-4 rounded-full font-semibold text-lg hover:scale-105 shadow-lg transition"
+            className="mt-8 bg-white text-black px-8 py-4 rounded-full font-semibold text-lg transform transition-transform duration-300 ease-in-out hover:scale-105 shadow-lg"
           >
             Reserva una demo
           </a>
@@ -71,21 +120,15 @@ function App() {
       {/* FEATURE GRID */}
       <section className="max-w-screen-xl mx-auto px-4 py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-2">
-          {[
-            { label: "Pasarela WhatsApp" },
-            { label: "Registros de auditoría" },
-            { label: "Alertas de escalamiento" },
-            { label: "Flujos de trabajo personalizados" },
-            { label: "Notificaciones en tiempo real" },
-            { label: "Cumplimiento" },
-            { label: "Panel de control" },
-            { label: "Plantillas" }
-          ].map((f, i) => (
-            <div key={i} className="bg-white rounded-2xl p-4 shadow-md flex flex-col items-center hover:shadow-xl transition">
-              <div className="w-12 h-12 flex items-center justify-center mb-2">
-                <PlaceholderIcon className="w-10 h-10" />
+          {features.map((feature, i) => (
+            <div
+              key={i}
+              className="bg-white rounded-2xl p-4 shadow-md flex flex-col items-center text-center group transform transition-all duration-300 ease-in-out hover:shadow-xl hover:-translate-y-1"
+            >
+              <div className="w-12 h-12 flex items-center justify-center mb-3 text-indigo-600">
+                <feature.Icon className="w-8 h-8 group-hover:scale-110 transition-transform duration-300 ease-in-out" />
               </div>
-              <div className="text-sm font-medium text-gray-700 text-center">{f.label}</div>
+              <div className="text-sm font-medium text-gray-700">{feature.label}</div>
             </div>
           ))}
         </div>
@@ -95,15 +138,17 @@ function App() {
       <section className="max-w-screen-xl mx-auto px-4 py-16">
         <h2 className="text-3xl font-semibold text-[#000d49] text-center mb-12">¿Cómo funciona Magnific?</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {[
-            { step: '01', title: 'Enviar solicitud', desc: 'Comienza con un WhatsApp o correo electrónico, o usa una plantilla.' },
-            { step: '02', title: 'Revisar y aprobar', desc: 'Gerentes y consejo revisan con aprobaciones listas para auditoría.' },
-            { step: '03', title: 'Completar y registrar', desc: 'Notificaciones automáticas y registro de auditoría para cada decisión.' },
-          ].map(({ step, title, desc }, i) => (
-            <div key={i} className="rounded-2xl p-6 bg-[#f8fafc] border border-gray-200 shadow-sm text-center flex flex-col items-center">
-              <div className="text-xl font-bold text-indigo-600 mb-2">{step}</div>
-              <div className="font-semibold mb-2 text-[#1e244d]">{title}</div>
-              <div className="text-gray-500 text-base max-w-xs">{desc}</div>
+          {workflowSteps.map((item, i) => (
+            <div
+              key={i}
+              className="rounded-2xl p-6 bg-[#f8fafc] border border-gray-200 shadow-sm text-center flex flex-col items-center transform transition-all duration-300 ease-in-out hover:shadow-md hover:-translate-y-1 h-full"
+            >
+              <div className="w-12 h-12 flex items-center justify-center mb-4 text-indigo-500">
+                <item.Icon className="w-8 h-8" />
+              </div>
+              <div className="text-indigo-600 mb-2 font-bold text-sm">PASO {item.step}</div>
+              <div className="font-semibold text-xl mb-3 text-[#1e244d]">{item.title}</div>
+              <div className="text-gray-500 text-base max-w-xs leading-relaxed">{item.desc}</div>
             </div>
           ))}
         </div>
@@ -114,7 +159,10 @@ function App() {
         <h2 className="text-3xl font-semibold text-[#000d49] text-center mb-12">Lo que dicen nuestros clientes</h2>
         <div className="grid gap-6 md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
           {testimonials.map((t, i) => (
-            <div key={i} className="bg-white rounded-xl shadow-md p-6 text-left space-y-3 flex flex-col">
+            <div
+              key={i}
+              className="bg-white rounded-xl shadow-md p-6 text-left space-y-3 flex flex-col transform transition-all duration-300 ease-in-out hover:shadow-lg hover:-translate-y-1"
+            >
               <div className="flex items-center gap-3">
                 <img src={t.avatar} alt={t.name} className="w-10 h-10 rounded-full object-cover" />
                 <div>
@@ -123,7 +171,7 @@ function App() {
                   <div className="text-xs text-gray-400">{t.subscribers}</div>
                 </div>
               </div>
-              <div className="text-[15px] text-gray-700 font-medium mt-2">{t.text}</div>
+              <div className="text-[15px] text-gray-700 font-medium mt-2 leading-relaxed">{t.text}</div>
             </div>
           ))}
         </div>
@@ -162,10 +210,10 @@ function App() {
               }
             ].map((item, i) => (
               <AccordionItem key={i} value={`faq${i}`}>
-                <AccordionTrigger className="py-4 px-1 text-left w-full font-medium text-gray-900 cursor-pointer hover:text-indigo-600 transition">
+                <AccordionTrigger className="py-4 px-4 text-left w-full font-medium text-gray-900 cursor-pointer hover:text-indigo-600 transition-colors duration-200 ease-in-out">
                   {item.q}
                 </AccordionTrigger>
-                <AccordionContent className="text-sm text-gray-600 pt-2 px-1 w-full">
+                <AccordionContent className="text-sm text-gray-600 pt-2 pb-4 px-4 w-full leading-relaxed">
                   {item.a}
                 </AccordionContent>
               </AccordionItem>
@@ -179,18 +227,18 @@ function App() {
         <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row gap-6 md:gap-0 justify-between items-center py-6 px-4">
           <div className="font-bold text-lg tracking-tight">MAGNIFIC</div>
           <div className="flex gap-6">
-            <a href="#" className="text-sm hover:underline transition">Política de privacidad</a>
-            <a href="#" className="text-sm hover:underline transition">Términos del servicio</a>
+            <a href="#" className="text-sm hover:underline transition-colors duration-200 ease-in-out">Política de privacidad</a>
+            <a href="#" className="text-sm hover:underline transition-colors duration-200 ease-in-out">Términos del servicio</a>
           </div>
           <div className="flex gap-4">
             {/* Social icon placeholders */}
-            <a href="#" aria-label="Twitter" className="hover:opacity-70">
+            <a href="#" aria-label="Twitter" className="hover:opacity-70 transition-opacity duration-200 ease-in-out">
               <svg width={20} height={20} fill="currentColor" className="text-white"><path d="M19.6,4.6c-0.5,0.2-0.9,0.3-1.4,0.4c0.5-0.3,0.9-0.8,1.1-1.3c-0.5,0.3-1,0.6-1.6,0.7c-0.5-0.5-1.3-0.8-2-0.8 c-1.5,0-2.5,1.4-2.2,2.8C7.7,6.2,4.1,4.5,1.7,1.9c-0.4,0.7-0.2,1.5,0.4,2c-0.4,0-0.7-0.1-1-0.3C1.1,5.3,2,6.3,3.3,6.6 c-0.3,0.1-0.6,0.1-0.8,0c0.2,0.7,0.9,1.2,1.7,1.2C3.2,8.8,2.3,9.1,1.4,9.1c-0.3,0-0.5,0-0.8-0.1C2.1,10.4,4.6,11.2,7.3,11.2 c8.5,0,13.2-7,12.9-13.4C18.4,5.2,19,5,19.6,4.6z"/></svg>
             </a>
-            <a href="#" aria-label="LinkedIn" className="hover:opacity-70">
+            <a href="#" aria-label="LinkedIn" className="hover:opacity-70 transition-opacity duration-200 ease-in-out">
               <svg width={20} height={20} fill="currentColor" className="text-white"><path d="M18.4 18.4h-3.2v-5.6c0-1.3 0-3-1.8-3-1.8 0-2.2 1.4-2.2 2.8v5.8H8V7.9h3v1.4h0c0.4-0.8 1.3-1.6 2.7-1.6 2.9 0 3.4 1.9 3.4 4.3V18.4zM4.2 6.6c-1 0-1.7-0.8-1.7-1.7 0-1 0.7-1.7 1.7-1.7s1.7 0.8 1.7 1.7c0 0.9-0.7 1.7-1.7 1.7zM6.3 18.4H2.1V7.9h4.2V18.4zM20 0H0v20h20V0z"/></svg>
             </a>
-            <a href="#" aria-label="Email" className="hover:opacity-70">
+            <a href="#" aria-label="Email" className="hover:opacity-70 transition-opacity duration-200 ease-in-out">
               <svg width={20} height={20} fill="currentColor" className="text-white"><path d="M1.4,4.1l8.3,6.1c0.6,0.5,1.5,0.5,2.1,0l8.3-6.1C19.6,4.7,20,5.4,20,6.1v7.8c0,1-0.7,1.7-1.7,1.7H1.7C0.7,15.6,0,14.9,0,13.9V6.1C0,5.4,0.4,4.7,1.4,4.1z M10,10.7L1.4,4.1C1.7,3.6,2.5,3.2,3.3,3.2h13.4c0.8,0,1.6,0.4,1.9,0.9L10,10.7z"/></svg>
             </a>
           </div>
