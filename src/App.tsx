@@ -17,24 +17,24 @@ function App() {
   const testimonials = [
     {
       name: "Dayanara",
-      sub: "Co-Founder of Ademsa",
+      sub: "Cofundadora de Ademsa",
       avatar: "https://randomuser.me/api/portraits/women/65.jpg",
-      subscribers: "13K subscribers",
-      text: "With Magnific, we cut our maintenance approval time from 3 days to under an hour—and finally have a proper audit trail for every decision.",
+      subscribers: "13K suscriptores",
+      text: "Con Magnific, redujimos nuestro tiempo de aprobación de mantenimiento de 3 días a menos de una hora—y finalmente tenemos una auditoría adecuada para cada decisión.",
     },
     {
       name: "Brandon M.",
-      sub: "Property Investor",
+      sub: "Inversionista inmobiliario",
       avatar: "https://randomuser.me/api/portraits/men/75.jpg",
-      subscribers: "700K subscribers",
-      text: "Magnific actually feels like a cheat code. I can legitimately make more approvals in less time. If you want to get started, you gotta give it a try.",
+      subscribers: "700K suscriptores",
+      text: "Magnific realmente se siente como un truco. Puedo hacer más aprobaciones en menos tiempo. Si quieres empezar, tienes que probarlo.",
     },
     {
       name: "James S.",
-      sub: "Building Manager",
+      sub: "Administrador de edificio",
       avatar: "https://randomuser.me/api/portraits/men/21.jpg",
-      subscribers: "850K subscribers",
-      text: "For real, Magnific has made compliance so much easier. I never miss a key deadline and have instant audit logs!",
+      subscribers: "850K suscriptores",
+      text: "De verdad, Magnific ha hecho que el cumplimiento sea mucho más fácil. ¡Nunca pierdo una fecha clave y tengo registros de auditoría al instante!",
     }
   ];
 
@@ -45,7 +45,7 @@ function App() {
         <div className="max-w-screen-xl mx-auto px-4 flex items-center justify-between py-6">
           <div className="text-white text-2xl font-bold tracking-tight" style={{ fontFamily: 'PP Mori, Inter, sans-serif' }}>MAGNIFIC</div>
           <a href="#demo" className="bg-white text-black font-semibold px-6 py-3 rounded-full hover:scale-105 transition text-base shadow">
-            Get a Demo
+            Solicita una demo
           </a>
         </div>
       </header>
@@ -54,16 +54,16 @@ function App() {
       <section className="w-full bg-[#000d49] py-20 sm:py-28">
         <div className="max-w-screen-xl mx-auto flex flex-col items-center px-4">
           <h1 className="text-5xl lg:text-6xl font-semibold text-white text-center max-w-3xl tracking-tight" style={{ fontFamily: 'PP Mori, Inter, sans-serif' }}>
-            Automate Every Approval, <br className="hidden sm:block" /> Cut Weeks of Back-and-forth to Minutes
+            Automatiza cada aprobación, <br className="hidden sm:block" /> Reduce semanas de idas y vueltas a minutos
           </h1>
           <p className="text-lg text-[#afdafa] mt-6 max-w-xl text-center">
-            Manage maintenance requests, budget sign-offs and vendor approvals—all in one, WhatsApp-powered workflow.
+            Gestiona solicitudes de mantenimiento, aprobaciones de presupuesto y proveedores—todo en un solo flujo de trabajo impulsado por WhatsApp.
           </p>
           <a
             href="#demo"
             className="mt-8 bg-white text-black px-8 py-4 rounded-full font-semibold text-lg hover:scale-105 shadow-lg transition"
           >
-            Book a Demo
+            Reserva una demo
           </a>
         </div>
       </section>
@@ -72,14 +72,14 @@ function App() {
       <section className="max-w-screen-xl mx-auto px-4 py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-2">
           {[
-            { label: "WhatsApp Gateway" },
-            { label: "Audit Logs" },
-            { label: "Escalation Alerts" },
-            { label: "Custom Workflows" },
-            { label: "Real-Time Ping" },
-            { label: "Compliance" },
-            { label: "Dashboard" },
-            { label: "Templates" }
+            { label: "Pasarela WhatsApp" },
+            { label: "Registros de auditoría" },
+            { label: "Alertas de escalamiento" },
+            { label: "Flujos de trabajo personalizados" },
+            { label: "Notificaciones en tiempo real" },
+            { label: "Cumplimiento" },
+            { label: "Panel de control" },
+            { label: "Plantillas" }
           ].map((f, i) => (
             <div key={i} className="bg-white rounded-2xl p-4 shadow-md flex flex-col items-center hover:shadow-xl transition">
               <div className="w-12 h-12 flex items-center justify-center mb-2">
@@ -93,12 +93,12 @@ function App() {
 
       {/* 3-STEP WORKFLOW SECTION */}
       <section className="max-w-screen-xl mx-auto px-4 py-16">
-        <h2 className="text-3xl font-semibold text-[#000d49] text-center mb-12">How Magnific Works</h2>
+        <h2 className="text-3xl font-semibold text-[#000d49] text-center mb-12">¿Cómo funciona Magnific?</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
-            { step: '01', title: 'Submit Request', desc: 'Start with a WhatsApp or email, or use a template.' },
-            { step: '02', title: 'Review & Approve', desc: 'Managers and board review with audit-ready approvals.' },
-            { step: '03', title: 'Complete & Log', desc: 'Automated notifications & audit log for every decision.' },
+            { step: '01', title: 'Enviar solicitud', desc: 'Comienza con un WhatsApp o correo electrónico, o usa una plantilla.' },
+            { step: '02', title: 'Revisar y aprobar', desc: 'Gerentes y consejo revisan con aprobaciones listas para auditoría.' },
+            { step: '03', title: 'Completar y registrar', desc: 'Notificaciones automáticas y registro de auditoría para cada decisión.' },
           ].map(({ step, title, desc }, i) => (
             <div key={i} className="rounded-2xl p-6 bg-[#f8fafc] border border-gray-200 shadow-sm text-center flex flex-col items-center">
               <div className="text-xl font-bold text-indigo-600 mb-2">{step}</div>
@@ -111,7 +111,7 @@ function App() {
 
       {/* TESTIMONIAL GRID */}
       <section className="max-w-screen-xl mx-auto px-4 py-16">
-        <h2 className="text-3xl font-semibold text-[#000d49] text-center mb-12">What Our Customers Say</h2>
+        <h2 className="text-3xl font-semibold text-[#000d49] text-center mb-12">Lo que dicen nuestros clientes</h2>
         <div className="grid gap-6 md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
           {testimonials.map((t, i) => (
             <div key={i} className="bg-white rounded-xl shadow-md p-6 text-left space-y-3 flex flex-col">
@@ -133,32 +133,32 @@ function App() {
       <section className="max-w-screen-xl mx-auto px-4 py-16">
         <div className="border-t border-b divide-y divide-gray-200 mt-12">
           {/* Section Title */}
-          <h2 className="text-3xl font-semibold text-[#000d49] py-10 text-center">Frequently Asked Questions</h2>
+          <h2 className="text-3xl font-semibold text-[#000d49] py-10 text-center">Preguntas frecuentes</h2>
           <Accordion type="single" collapsible className="w-full divide-y divide-gray-200">
             {[
               {
-                q: "Can I cancel at any time?",
-                a: "Absolutely! You can cancel your Magnific subscription at any time in your account or by contacting support.",
+                q: "¿Puedo cancelar en cualquier momento?",
+                a: "¡Por supuesto! Puedes cancelar tu suscripción a Magnific en cualquier momento desde tu cuenta o contactando al soporte.",
               },
               {
-                q: "Does Magnific work on mobile and desktop?",
-                a: "Yes, Magnific workflows and approvals can be managed from any device via WhatsApp, email, or browser.",
+                q: "¿Magnific funciona en móvil y escritorio?",
+                a: "Sí, los flujos de trabajo y aprobaciones de Magnific pueden gestionarse desde cualquier dispositivo vía WhatsApp, correo electrónico o navegador.",
               },
               {
-                q: "Is my data secure?",
-                a: "We use industry best practices and encryption to keep your data and audit logs protected.",
+                q: "¿Mis datos están seguros?",
+                a: "Usamos las mejores prácticas de la industria y cifrado para mantener tus datos y registros de auditoría protegidos.",
               },
               {
-                q: "How quickly can we onboard?",
-                a: "You can get started within a day—most users onboard in under an hour. Our team will assist you with setup if needed.",
+                q: "¿Qué tan rápido podemos comenzar?",
+                a: "Puedes empezar en un día—la mayoría de los usuarios se incorporan en menos de una hora. Nuestro equipo te asistirá con la configuración si lo necesitas.",
               },
               {
-                q: "Can I customize my workflow?",
-                a: "Yes! Magnific has a drag-and-drop workflow editor so you can mirror your exact process.",
+                q: "¿Puedo personalizar mi flujo de trabajo?",
+                a: "¡Sí! Magnific tiene un editor de flujos de trabajo de arrastrar y soltar para que puedas reflejar tu proceso exacto.",
               },
               {
-                q: "How do escalations work?",
-                a: "If an approver is delayed, Magnific automatically triggers reminders and escalations via your chosen channel (SMS, email, or call).",
+                q: "¿Cómo funcionan las escalaciones?",
+                a: "Si un aprobador se retrasa, Magnific activa automáticamente recordatorios y escalaciones por el canal que elijas (SMS, correo electrónico o llamada).",
               }
             ].map((item, i) => (
               <AccordionItem key={i} value={`faq${i}`}>
@@ -179,8 +179,8 @@ function App() {
         <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row gap-6 md:gap-0 justify-between items-center py-6 px-4">
           <div className="font-bold text-lg tracking-tight">MAGNIFIC</div>
           <div className="flex gap-6">
-            <a href="#" className="text-sm hover:underline transition">Privacy Policy</a>
-            <a href="#" className="text-sm hover:underline transition">Terms of Service</a>
+            <a href="#" className="text-sm hover:underline transition">Política de privacidad</a>
+            <a href="#" className="text-sm hover:underline transition">Términos del servicio</a>
           </div>
           <div className="flex gap-4">
             {/* Social icon placeholders */}
