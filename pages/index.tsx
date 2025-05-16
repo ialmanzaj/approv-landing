@@ -95,32 +95,32 @@ export default function HomePage() {
         {
             Icon: Clock,
             title: "Aprobaciones lentas y desorganizadas",
-            description: "“Mando un correo o mensaje en WhatsApp, y nadie responde por días.”"
+            description: "“Mando un correo o un mensaje por WhatsApp… y pasan días sin respuesta. Mientras tanto, todo se detiene.”"
         },
         {
             Icon: Folders,
             title: "Canales de comunicación dispersos",
-            description: "“Unas cosas llegan por WhatsApp, otras por correo, otras están en una hoja de Excel.”"
+            description: "“Una aprobación está en WhatsApp, otra en el correo, otra perdida en un Excel. Y cuando la necesitas… nadie sabe dónde buscar.”"
         },
         {
             Icon: ClipboardX,
             title: "Falta de trazabilidad y respaldo",
-            description: "“Si alguien me pregunta ‘¿quién aprobó esto?’, no tengo cómo demostrarlo.”"
+            description: "“Cuando alguien pregunta ‘¿quién aprobó esto?’, solo hay silencio. No hay registro. No hay respaldo.”"
         },
         {
             Icon: Hourglass,
             title: "Tiempo perdido en tareas repetitivas",
-            description: "“Paso horas persiguiendo firmas o respuestas.”"
+            description: "“Horas y horas escribiendo, llamando, persiguiendo respuestas… en lugar de avanzar con lo importante.”"
         },
         {
             Icon: AlertTriangle,
             title: "Riesgo operativo y legal",
-            description: "“Se nos han pasado fechas de contratos porque nadie aprobó a tiempo.”"
+            description: "“Se nos vencen contratos. Se nos pasan fechas clave. Todo por una firma que nunca llegó a tiempo.”"
         },
         {
             Icon: Frown,
             title: "Frustración del equipo y desgaste emocional",
-            description: "“Llego a la junta agotada por estar persiguiendo todo.”"
+            description: "“Llego a la junta agotada. No por el trabajo… sino por tener que perseguir todo como si fuera mi única tarea.”"
         }
     ];
 
