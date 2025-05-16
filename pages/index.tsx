@@ -133,10 +133,10 @@ export default function HomePage() {
             <section id="demo" className="w-full bg-[#000d49] py-20 sm:py-28">
                 <div className="max-w-screen-xl mx-auto flex flex-col items-center px-4">
                     <h1 className="text-5xl lg:text-6xl font-semibold text-white text-center max-w-3xl tracking-tight" style={{ fontFamily: 'PP Mori, Inter, sans-serif' }}>
-                        Automatiza cada aprobación, <br className="hidden sm:block" /> Reduce semanas de idas y vueltas a minutos
+                        Automatiza cada aprobación, <br className="hidden sm:block" /> Convierte semanas de espera en minutos.
                     </h1>
                     <p className="text-lg text-[#afdafa] mt-6 max-w-xl text-center">
-                        Gestiona solicitudes de mantenimiento, aprobaciones de presupuesto y proveedores—todo en un solo flujo de trabajo impulsado por WhatsApp.
+                        Centraliza tus aprobaciones, obtén trazabilidad y elimina el caos.
                     </p>
                     <div className="flex flex-col items-center mt-8">
                         <a
@@ -239,29 +239,17 @@ export default function HomePage() {
                     <p className="text-lg text-gray-600 text-center mb-8 md:mb-10">
                         Todo lo que necesitas saber sobre el producto
                     </p>
-                    <Accordion 
-                        type="single" 
-                        collapsible 
+                    <Accordion
+                        type="single"
+                        collapsible
                         className="w-full space-y-4"
-                        value={openFaq || undefined} 
+                        value={openFaq || undefined}
                         onValueChange={setOpenFaq}
                     >
                         {[
                             {
-                                q: "¿Puedo cancelar en cualquier momento?",
-                                a: "¡Por supuesto! Puedes cancelar tu suscripción a Aprov en cualquier momento desde tu cuenta o contactando al soporte.",
-                            },
-                            {
-                                q: "¿Aprov funciona en móvil y escritorio?",
-                                a: "Sí, los flujos de trabajo y aprobaciones de Aprov pueden gestionarse desde cualquier dispositivo vía WhatsApp, correo electrónico o navegador.",
-                            },
-                            {
-                                q: "¿Mis datos están seguros?",
-                                a: "Usamos las mejores prácticas de la industria y cifrado para mantener tus datos y registros de auditoría protegidos.",
-                            },
-                            {
-                                q: "¿Qué tan rápido podemos comenzar?",
-                                a: "Puedes empezar en un día—la mayoría de los usuarios se incorporan en menos de una hora. Nuestro equipo te asistirá con la configuración si lo necesitas.",
+                                q: "¿Qué es Aprov?",
+                                a: "Aprov es una plataforma de aprobaciones automatizadas que te permite gestionar y aprobar documentos de manera eficiente y segura.",
                             },
                             {
                                 q: "¿Puedo personalizar mi flujo de trabajo?",
@@ -270,19 +258,29 @@ export default function HomePage() {
                             {
                                 q: "¿Cómo funcionan las escalaciones?",
                                 a: "Si un aprobador se retrasa, Aprov activa automáticamente recordatorios y escalaciones por el canal que elijas (SMS, correo electrónico o llamada).",
-                            }
+                            },
+
+                            {
+                                q: "¿Mis datos están seguros?",
+                                a: "Usamos las mejores prácticas de la industria y cifrado para mantener tus datos y registros de auditoría protegidos.",
+                            },
+                            {
+                                q: "¿Qué tan rápido podemos comenzar?",
+                                a: "Puedes empezar en un día—la mayoría de los usuarios se incorporan en menos de una hora. Nuestro equipo te asistirá con la configuración si lo necesitas.",
+                            },
+
                         ].map((item, i) => (
-                            <AccordionItem 
-                                key={i} 
-                                value={`faq${i}`} 
+                            <AccordionItem
+                                key={i}
+                                value={`faq${i}`}
                                 className="bg-white rounded-xl shadow-sm"
                             >
-                                <AccordionTrigger 
+                                <AccordionTrigger
                                     className="w-full p-4 sm:p-6 text-left text-sm sm:text-base font-medium text-gray-900 hover:no-underline focus:outline-none focus-visible:ring focus-visible:ring-indigo-500 focus-visible:ring-opacity-75"
                                 >
                                     {item.q}
                                 </AccordionTrigger>
-                                <AccordionContent 
+                                <AccordionContent
                                     className="px-4 pb-4 pt-0 sm:px-6 sm:pb-6 text-sm text-gray-700 leading-relaxed"
                                 >
                                     {item.a}
