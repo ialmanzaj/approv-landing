@@ -1,0 +1,61 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# Next.js Page Components
+
+<version>0.1.0</version>
+
+## Context
+- Apply when creating or modifying files within the `pages` directory.
+- These components serve as the entry point for routes in a Next.js application.
+
+## Requirements
+- Each page component **MUST** be a default export.
+- Page components **SHOULD** use `next/head` for managing document head elements like `<title>` and `<meta>` tags.
+- Page components **SHOULD** handle data fetching using Next.js data fetching methods (`getServerSideProps`, `getStaticProps`, `getInitialProps`) if server-side data is needed.
+- Page file names **MUST** follow Next.js routing conventions (e.g., `index.tsx`, `[id].tsx`).
+
+## Examples
+<example>
+```tsx
+// pages/example-page.tsx
+import Head from 'next/head';
+
+export default function ExamplePage() {
+  return (
+    <>
+      <Head>
+        <title>Example Page</title>
+        <meta name="description" content="This is an example page." />
+      </Head>
+      <div>
+        <h1>Hello from Example Page!</h1>
+      </div>
+    </>
+  );
+}
+```
+This is a good example as it default exports the component and uses `next/head`.
+</example>
+
+<example type="invalid">
+```tsx
+// pages/bad-example.tsx
+import Head from 'next/head';
+
+// Missing default export
+export const BadExample = () => {
+  return (
+    <div>
+      <Head>
+        <title>Bad Example</title>
+      </Head>
+      <p>This page will not work correctly as a Next.js page.</p>
+    </div>
+  );
+};
+```
+This is an invalid example because it does not use a default export, which is required for Next.js pages.
+</example>

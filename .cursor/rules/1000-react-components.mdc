@@ -1,0 +1,61 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# React Component Guidelines
+
+<version>0.1.0</version>
+
+## Context
+- Apply when creating or modifying React functional components within the `src/components` directory.
+- These rules aim to maintain consistency and readability.
+
+## Requirements
+- Components **MUST** be functional components.
+- Components **SHOULD** use PascalCase for naming (e.g., `MyComponent`).
+- Props interfaces/types **SHOULD** be defined clearly, preferably using TypeScript interfaces or types.
+- Destructure props whenever possible for clarity.
+- Avoid anonymous functions for event handlers if the logic is complex; define them separately.
+- Components **SHOULD** be default exported if they are the primary export of the file, otherwise named exports are fine.
+
+## Examples
+<example>
+```tsx
+// src/components/UserProfile.tsx
+import React from 'react';
+
+interface UserProfileProps {
+  name: string;
+  age: number;
+}
+
+const UserProfile: React.FC<UserProfileProps> = ({ name, age }) => {
+  return (
+    <div>
+      <p>Name: {name}</p>
+      <p>Age: {age}</p>
+    </div>
+  );
+};
+
+export default UserProfile;
+```
+This component follows naming conventions, defines props clearly, and destructures props.
+</example>
+
+<example type="invalid">
+```tsx
+// src/components/badComponent.tsx
+import React from 'react';
+
+// Incorrect naming (should be PascalCase)
+const badComponent = (props: any) => {
+  // Avoid using 'any' for props
+  return <button onClick={() => { /* complex logic here */ }}>{props.text}</button>;
+};
+
+export default badComponent;
+```
+This component uses incorrect naming, 'any' for props, and an inline complex event handler.
+</example>

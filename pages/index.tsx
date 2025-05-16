@@ -44,21 +44,21 @@ export default function HomePage() { // Changed component name for a Next.js pag
             sub: "Cofundadora de Ademsa",
             avatar: "https://randomuser.me/api/portraits/women/65.jpg",
             subscribers: "13K suscriptores",
-            text: "Con Magnific, redujimos nuestro tiempo de aprobación de mantenimiento de 3 días a menos de una hora—y finalmente tenemos una auditoría adecuada para cada decisión.",
+            text: "Con Aprov, redujimos nuestro tiempo de aprobación de mantenimiento de 3 días a menos de una hora—y finalmente tenemos una auditoría adecuada para cada decisión.",
         },
         {
             name: "Brandon M.",
             sub: "Inversionista inmobiliario",
             avatar: "https://randomuser.me/api/portraits/men/75.jpg",
             subscribers: "700K suscriptores",
-            text: "Magnific realmente se siente como un truco. Puedo hacer más aprobaciones en menos tiempo. Si quieres empezar, tienes que probarlo.",
+            text: "Aprov realmente se siente como un truco. Puedo hacer más aprobaciones en menos tiempo. Si quieres empezar, tienes que probarlo.",
         },
         {
             name: "James S.",
             sub: "Administrador de edificio",
             avatar: "https://randomuser.me/api/portraits/men/21.jpg",
             subscribers: "850K suscriptores",
-            text: "De verdad, Magnific ha hecho que el cumplimiento sea mucho más fácil. ¡Nunca pierdo una fecha clave y tengo registros de auditoría al instante!",
+            text: "De verdad, Aprov ha hecho que el cumplimiento sea mucho más fácil. ¡Nunca pierdo una fecha clave y tengo registros de auditoría al instante!",
         }
     ];
 
@@ -89,7 +89,7 @@ export default function HomePage() { // Changed component name for a Next.js pag
         {
             step: '03',
             Icon: Save,
-            title: "Magnific guarda todo automáticamente",
+            title: "Aprov guarda todo automáticamente",
             desc: "Al aprobarse, se notifica al equipo, se genera un acta con nombres y fecha, y queda todo listo para respaldo o auditoría."
         }
     ];
@@ -130,8 +130,8 @@ export default function HomePage() { // Changed component name for a Next.js pag
     return (
         <>
             <Head>
-                <title>MAGNIFIC - Automatiza Aprobaciones</title>
-                <meta name="description" content="Automatiza cada aprobación, reduce semanas de idas y vueltas a minutos con Magnific." />
+                <title>APROV - Automatiza Aprobaciones</title>
+                <meta name="description" content="Automatiza cada aprobación, reduce semanas de idas y vueltas a minutos con Aprov." />
                 {/* Add other relevant meta tags, favicon link, etc. here */}
                 {/* <link rel="icon" href="/favicon.ico" /> */}
             </Head>
@@ -139,7 +139,7 @@ export default function HomePage() { // Changed component name for a Next.js pag
                 {/* HEADER */}
                 <header className="bg-[#000d49] w-full">
                     <div className="max-w-screen-xl mx-auto px-4 flex items-center justify-between py-6">
-                        <div className="text-white text-2xl font-bold tracking-tight" style={{ fontFamily: 'PP Mori, Inter, sans-serif' }}>MAGNIFIC</div>
+                        <div className="text-white text-2xl font-bold tracking-tight" style={{ fontFamily: 'PP Mori, Inter, sans-serif' }}>APROV</div>
                         <a
                             href="#demo" // Consider using Next.js Link for internal navigation if #demo is on the same page or another page
                             className="bg-white text-black font-semibold px-6 py-3 rounded-full transform transition-transform duration-300 ease-in-out hover:scale-105 text-base shadow"
@@ -191,7 +191,7 @@ export default function HomePage() { // Changed component name for a Next.js pag
 
                 {/* 3-STEP WORKFLOW SECTION */}
                 <section className="max-w-screen-xl mx-auto px-4 py-16">
-                    <h2 className="text-3xl font-semibold text-[#000d49] text-center mb-12">¿Cómo funciona Magnific?</h2>
+                    <h2 className="text-3xl font-semibold text-[#000d49] text-center mb-12">¿Cómo funciona Aprov?</h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {workflowSteps.map((item, i) => (
                             <div
@@ -252,18 +252,29 @@ export default function HomePage() { // Changed component name for a Next.js pag
 
                 {/* FAQ SECTION */}
                 <section className="max-w-screen-xl mx-auto px-4 py-16">
-                    <div className="border-t border-b divide-y divide-gray-200 mt-12">
+                    <div className="mt-12 max-w-3xl mx-auto">
                         {/* Section Title */}
-                        <h2 className="text-3xl font-semibold text-[#000d49] py-10 text-center">Preguntas frecuentes</h2>
-                        <Accordion type="single" collapsible className="w-full divide-y divide-gray-200" value={openFaq || undefined} onValueChange={setOpenFaq}>
+                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center pb-4">
+                            Preguntas frecuentes
+                        </h2>
+                        <p className="text-lg text-gray-600 text-center mb-8 md:mb-10">
+                            Todo lo que necesitas saber sobre el producto
+                        </p>
+                        <Accordion 
+                            type="single" 
+                            collapsible 
+                            className="w-full space-y-4"
+                            value={openFaq || undefined} 
+                            onValueChange={setOpenFaq}
+                        >
                             {[
                                 {
                                     q: "¿Puedo cancelar en cualquier momento?",
-                                    a: "¡Por supuesto! Puedes cancelar tu suscripción a Magnific en cualquier momento desde tu cuenta o contactando al soporte.",
+                                    a: "¡Por supuesto! Puedes cancelar tu suscripción a Aprov en cualquier momento desde tu cuenta o contactando al soporte.",
                                 },
                                 {
-                                    q: "¿Magnific funciona en móvil y escritorio?",
-                                    a: "Sí, los flujos de trabajo y aprobaciones de Magnific pueden gestionarse desde cualquier dispositivo vía WhatsApp, correo electrónico o navegador.",
+                                    q: "¿Aprov funciona en móvil y escritorio?",
+                                    a: "Sí, los flujos de trabajo y aprobaciones de Aprov pueden gestionarse desde cualquier dispositivo vía WhatsApp, correo electrónico o navegador.",
                                 },
                                 {
                                     q: "¿Mis datos están seguros?",
@@ -275,18 +286,26 @@ export default function HomePage() { // Changed component name for a Next.js pag
                                 },
                                 {
                                     q: "¿Puedo personalizar mi flujo de trabajo?",
-                                    a: "¡Sí! Magnific tiene un editor de flujos de trabajo de arrastrar y soltar para que puedas reflejar tu proceso exacto.",
+                                    a: "¡Sí! Aprov tiene un editor de flujos de trabajo de arrastrar y soltar para que puedas reflejar tu proceso exacto.",
                                 },
                                 {
                                     q: "¿Cómo funcionan las escalaciones?",
-                                    a: "Si un aprobador se retrasa, Magnific activa automáticamente recordatorios y escalaciones por el canal que elijas (SMS, correo electrónico o llamada).",
+                                    a: "Si un aprobador se retrasa, Aprov activa automáticamente recordatorios y escalaciones por el canal que elijas (SMS, correo electrónico o llamada).",
                                 }
                             ].map((item, i) => (
-                                <AccordionItem key={i} value={`faq${i}`}>
-                                    <AccordionTrigger className="py-4 px-4 text-left w-full font-medium text-gray-900 cursor-pointer hover:text-indigo-600 transition-colors duration-200 ease-in-out">
+                                <AccordionItem 
+                                    key={i} 
+                                    value={`faq${i}`} 
+                                    className="bg-white rounded-xl shadow-sm"
+                                >
+                                    <AccordionTrigger 
+                                        className="w-full p-4 sm:p-6 text-left text-sm sm:text-base font-medium text-gray-900 hover:no-underline focus:outline-none focus-visible:ring focus-visible:ring-indigo-500 focus-visible:ring-opacity-75"
+                                    >
                                         {item.q}
                                     </AccordionTrigger>
-                                    <AccordionContent className="text-sm text-gray-600 pt-2 pb-4 px-4 w-full leading-relaxed">
+                                    <AccordionContent 
+                                        className="px-4 pb-4 pt-0 sm:px-6 sm:pb-6 text-sm text-gray-700 leading-relaxed"
+                                    >
                                         {item.a}
                                     </AccordionContent>
                                 </AccordionItem>
@@ -298,7 +317,7 @@ export default function HomePage() { // Changed component name for a Next.js pag
                 {/* FOOTER */}
                 <footer className="bg-[#000d49] text-white">
                     <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row gap-6 md:gap-0 justify-between items-center py-6 px-4">
-                        <div className="font-bold text-lg tracking-tight">MAGNIFIC</div>
+                        <div className="font-bold text-lg tracking-tight">APROV</div>
                         <div className="flex gap-6">
                             <a href="#" className="text-sm hover:underline transition-colors duration-200 ease-in-out">Política de privacidad</a>
                             <a href="#" className="text-sm hover:underline transition-colors duration-200 ease-in-out">Términos del servicio</a>
@@ -317,7 +336,7 @@ export default function HomePage() { // Changed component name for a Next.js pag
                         </div>
                     </div>
                     <div className="max-w-screen-xl mx-auto py-4 px-4 text-center text-xs text-gray-400 border-t border-gray-700">
-                        © {new Date().getFullYear()} Magnific. Todos los derechos reservados.
+                        © {new Date().getFullYear()} Aprov. Todos los derechos reservados.
                     </div>
                 </footer>
             </div>

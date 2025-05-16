@@ -1,0 +1,53 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# Lucide Icons Usage
+
+<version>0.1.0</version>
+
+## Context
+- Apply when importing and using icons from the `lucide-react` library.
+- Ensures consistent icon usage and styling.
+
+## Requirements
+- Icons **MUST** be imported directly from `lucide-react`.
+- Icon components **SHOULD** be aliased if their names conflict with other variables or for better readability (e.g., `import { Link as LinkIcon } from 'lucide-react';`).
+- Default styling (size, strokeWidth) can be overridden via props.
+- When an icon is used as a placeholder or its specific identity isn't critical to the rule, a generic `PlaceholderIcon` component can be used for brevity in examples, but production code **MUST** use specific Lucide icons.
+
+## Examples
+<example>
+```tsx
+import { MessageSquareText, Link as LinkIcon } from 'lucide-react';
+
+const MyComponent = () => {
+  return (
+    <div>
+      <MessageSquareText className="w-6 h-6 text-blue-500" />
+      <LinkIcon size={24} strokeWidth={1.5} />
+    </div>
+  );
+};
+```
+This example shows direct import, aliasing, and prop usage for styling.
+</example>
+
+<example type="invalid">
+```tsx
+// Assuming PlaceholderIcon is a generic SVG not from lucide-react
+// import { PlaceholderIcon } from '../components/icons'; 
+
+// Incorrect: Using a generic placeholder in a context where a specific Lucide icon is expected or available
+const MyBadComponent = () => {
+  return (
+    <div>
+      {/* <PlaceholderIcon className="w-5 h-5" /> */}
+      {/* This is invalid if a specific icon like User from lucide-react should be used */}
+    </div>
+  );
+};
+```
+This is invalid if a specific Lucide icon should have been used instead of a generic one.
+</example>
