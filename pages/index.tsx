@@ -249,26 +249,44 @@ export default function HomePage() {
                         {[
                             {
                                 q: "¿Qué es Aprov?",
-                                a: "Aprov es una plataforma de aprobaciones automatizadas que te permite gestionar y aprobar documentos de manera eficiente y segura.",
+                                a: "Aprov es una herramienta que te permite gestionar aprobaciones internas de forma rápida y sencilla usando WhatsApp y correo electrónico. Sin necesidad de apps adicionales ni cuentas nuevas.",
                             },
                             {
-                                q: "¿Puedo personalizar mi flujo de trabajo?",
-                                a: "¡Sí! Aprov tiene un editor de flujos de trabajo de arrastrar y soltar para que puedas reflejar tu proceso exacto.",
+                                q: "¿Cómo funciona?",
+                                a: "Creamos un enlace de aprobación único que puedes enviar por WhatsApp o correo a las personas responsables. Cada persona puede aprobar o rechazar desde su celular o computadora, sin complicaciones.",
                             },
                             {
-                                q: "¿Cómo funcionan las escalaciones?",
-                                a: "Si un aprobador se retrasa, Aprov activa automáticamente recordatorios y escalaciones por el canal que elijas (SMS, correo electrónico o llamada).",
-                            },
-
-                            {
-                                q: "¿Mis datos están seguros?",
-                                a: "Usamos las mejores prácticas de la industria y cifrado para mantener tus datos y registros de auditoría protegidos.",
+                                q: "¿Necesito descargar algo?",
+                                a: "No. Aprov funciona directamente desde tu navegador y tu cuenta de WhatsApp. Solo necesitas tener acceso a internet.",
                             },
                             {
-                                q: "¿Qué tan rápido podemos comenzar?",
-                                a: "Puedes empezar en un día—la mayoría de los usuarios se incorporan en menos de una hora. Nuestro equipo te asistirá con la configuración si lo necesitas.",
+                                q: "¿Quién puede ver mis aprobaciones?",
+                                a: "Solo las personas autorizadas por tu empresa. Cada enlace de aprobación es único y seguro. Además, todo queda registrado para que puedas auditar el proceso después.",
                             },
-
+                            {
+                                q: "¿Qué tipo de mensajes recibiré por WhatsApp?",
+                                a: "Solo mensajes relacionados con solicitudes de aprobación, recordatorios o confirmaciones. Nunca enviamos spam ni promociones.",
+                            },
+                            {
+                                q: "¿Cómo doy mi consentimiento para recibir mensajes?",
+                                a: "Antes de que te enviemos cualquier mensaje, debes aceptar una casilla de consentimiento o dar tu autorización por correo o formulario. Siempre puedes cancelar escribiendo \"STOP\" por WhatsApp.",
+                            },
+                            {
+                                q: "¿Puedo dejar de recibir mensajes?",
+                                a: "Sí. Puedes responder \"STOP\" en cualquier momento y dejaremos de enviarte mensajes de forma inmediata.",
+                            },
+                            {
+                                q: "¿Qué pasa con mis datos personales?",
+                                a: "Tus datos están protegidos bajo nuestra Política de Privacidad. No los compartimos con terceros ni los usamos para fines comerciales. Solo se utilizan para mejorar tu experiencia con Aprov.",
+                            },
+                            {
+                                q: "¿Aprov cumple con las leyes de protección de datos?",
+                                a: "Sí. Cumplimos con regulaciones como el GDPR y otras leyes locales. Protegemos tu información con altos estándares de seguridad y transparencia.",
+                            },
+                            {
+                                q: "¿Quién está detrás de Aprov?",
+                                a: "Aprov es un producto de Fibbonacci Labs LLC, una empresa de tecnología con sede en Panamá y Estados Unidos, enfocada en crear herramientas simples para procesos complejos.",
+                            }
                         ].map((item, i) => (
                             <AccordionItem
                                 key={i}

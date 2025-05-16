@@ -7,95 +7,91 @@ const PrivacyPolicyPage = () => {
       <div className="max-w-screen-md mx-auto px-4 py-8 md:py-12">
         <article className="prose prose-indigo lg:prose-lg mx-auto text-gray-700">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center">Política de Privacidad</h1>
-          <p className="text-sm text-gray-500 mb-8 text-center">Última actualización: 15 de Mayo de 2025</p>
+          <p className="text-sm text-gray-500 mb-8 text-center">Fecha de Entrada en Vigor: 16/05/2025</p>
 
-          <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-3">1. Introducción</h2>
-          <p>
-            Bienvenido/a a Aprov. Nos comprometemos a proteger tu información personal y tu derecho a la privacidad.
-            Si tienes alguna pregunta o inquietud sobre este aviso de privacidad, o nuestras prácticas con respecto a tu información personal,
-            por favor contáctanos en [Tu Email/Página de Contacto].
-          </p>
-          <p>
-            Este aviso de privacidad describe cómo podríamos usar tu información si:
-            <ul className="list-disc list-inside my-2 pl-4">
-              <li>Visitas nuestro sitio web en [URL de Tu Sitio Web]</li>
-              <li>Interactúas con nosotros de otras maneras relacionadas, incluyendo ventas, marketing o eventos</li>
-            </ul>
-          </p>
-          <p>En este aviso de privacidad, si nos referimos a: "Sitio Web", nos referimos a cualquier sitio web nuestro que haga referencia o enlace a esta política; "Servicios", nos referimos a nuestro Sitio Web y otros servicios relacionados, incluyendo ventas, marketing o eventos.</p>
-
-          <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-3">2. ¿Qué Información Recopilamos?</h2>
-          <p>
-            Recopilamos información personal que tú nos proporcionas voluntariamente cuando expresas interés en obtener
-            información sobre nosotros o nuestros productos y Servicios, cuando participas en actividades en el Sitio Web o de otra manera
-            cuando nos contactas.
-          </p>
-          <p>
-            La información personal que recopilamos depende del contexto de tus interacciones con nosotros y el Sitio Web,
-            las elecciones que haces y los productos y características que utilizas. La información personal que recopilamos puede incluir lo siguiente:
-            Nombre y Datos de Contacto, Credenciales, Datos de Pago (si aplica).
+          <p className="mb-4">
+            Fibbonacci Labs LLC ("nosotros", "nos", o "nuestro") se compromete a proteger su privacidad y sus datos personales. Esta Política de Privacidad explica cómo recopilamos, usamos, almacenamos y protegemos su información cuando interactúa con nuestra plataforma Aprov y nuestras funciones de mensajería de WhatsApp Business.
           </p>
 
-          <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-3">3. ¿Cómo Utilizamos Tu Información?</h2>
-          <p>
-            Utilizamos la información personal recopilada a través de nuestro Sitio Web para una variedad de propósitos comerciales descritos a continuación.
-            Procesamos tu información personal para estos propósitos en base a nuestros intereses comerciales legítimos,
-            para celebrar o ejecutar un contrato contigo, con tu consentimiento, y/o para cumplir con nuestras obligaciones legales.
+          <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-3">1. Información que Recopilamos</h2>
+          <p>Podemos recopilar y procesar los siguientes tipos de datos personales:</p>
+          <ul className="list-disc list-inside my-2 pl-4">
+            <li>Nombre completo</li>
+            <li>Dirección de correo electrónico</li>
+            <li>Número de teléfono (incluido el número de WhatsApp)</li>
+            <li>Decisiones de aprobación y marcas de tiempo</li>
+            <li>Preferencias de comunicación</li>
+            <li>Metadatos como la dirección IP y datos del navegador (si aplica)</li>
+          </ul>
+
+          <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-3">2. Cómo Usamos Su Información</h2>
+          <p>Usamos su información para:</p>
+          <ul className="list-disc list-inside my-2 pl-4">
+            <li>Enviar solicitudes de aprobación, actualizaciones y recordatorios a través de WhatsApp y correo electrónico</li>
+            <li>Rastrear y auditar las decisiones de aprobación</li>
+            <li>Responder a consultas de servicio al cliente</li>
+            <li>Mejorar y personalizar nuestros servicios</li>
+          </ul>
+
+          <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-3">3. Base Legal para el Procesamiento (GDPR)</h2>
+          <p>Procesamos sus datos personales bajo las siguientes bases legales:</p>
+          <ul className="list-disc list-inside my-2 pl-4">
+            <li>Consentimiento – Para enviarle mensajes de WhatsApp y notificaciones por correo electrónico.</li>
+            <li>Necesidad contractual – Cuando el procesamiento es necesario para prestar los servicios que ha solicitado (por ejemplo, gestionar aprobaciones).</li>
+            <li>Intereses legítimos – Para mantener registros de auditoría y mejorar nuestra plataforma de manera que no anulen sus derechos de privacidad.</li>
+          </ul>
+
+          <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-3">4. Mensajería de WhatsApp y Consentimiento</h2>
+          <p>Al optar por participar, acepta recibir mensajes relacionados con aprobaciones a través de WhatsApp de Fibbonacci Labs LLC. Estos mensajes pueden incluir:</p>
+          <ul className="list-disc list-inside my-2 pl-4">
+            <li>Solicitudes de aprobación</li>
+            <li>Recordatorios o escalaciones</li>
+            <li>Confirmaciones de decisiones enviadas</li>
+          </ul>
+          <p className="mt-2">
+            Puede retirar su consentimiento en cualquier momento respondiendo STOP en WhatsApp o contactándonos en support@aprov.tech.
           </p>
 
-          <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-3">4. ¿Se Compartirá Tu Información Con Alguien?</h2>
+          <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-3">5. Retención de Datos</h2>
           <p>
-            Solo compartimos información con tu consentimiento, para cumplir con las leyes, para proporcionarte servicios,
-            para proteger tus derechos o para cumplir con obligaciones comerciales.
+            Retenemos los datos personales solo durante el tiempo necesario para cumplir con los fines descritos anteriormente. Los datos pueden conservarse por más tiempo si así lo exigen las obligaciones legales, los requisitos de auditoría o los procesos de resolución de disputas. Cuando ya no sean necesarios, sus datos se eliminarán o anonimizarán de forma segura.
           </p>
 
-          <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-3">5. ¿Cuánto Tiempo Conservamos Tu Información?</h2>
+          <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-3">6. Transferencias Internacionales de Datos</h2>
           <p>
-            Conservamos tu información durante el tiempo que sea necesario para cumplir con los propósitos descritos en este aviso de privacidad
-            a menos que la ley exija lo contrario.
+            Su información puede almacenarse y procesarse en servidores ubicados fuera de su país de residencia, incluidos los Estados Unidos. Al transferir datos internacionalmente, nos aseguramos de que existan las salvaguardas adecuadas, tales como:
           </p>
+          <ul className="list-disc list-inside my-2 pl-4">
+            <li>Cláusulas Contractuales Tipo (CCT) aprobadas por la Comisión Europea</li>
+            <li>Otros mecanismos legales según las regulaciones aplicables</li>
+          </ul>
 
-          <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-3">6. ¿Cómo Mantenemos Segura Tu Información?</h2>
-          <p>
-            Nuestro objetivo es proteger tu información personal a través de un sistema de medidas de seguridad organizativas y técnicas.
-          </p>
+          <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-3">7. Seguridad de los Datos</h2>
+          <p>Utilizamos medidas de seguridad técnicas y organizativas para proteger sus datos personales, que incluyen:</p>
+          <ul className="list-disc list-inside my-2 pl-4">
+            <li>Cifrado de datos en tránsito y en reposo</li>
+            <li>Controles de acceso y mecanismos de autenticación</li>
+            <li>Auditorías de seguridad periódicas y gestión de vulnerabilidades</li>
+          </ul>
 
-          <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-3">7. ¿Recopilamos Información De Menores?</h2>
-          <p>
-            No solicitamos conscientemente datos ni comercializamos a niños menores de 18 años.
-          </p>
+          <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-3">8. Sus Derechos Bajo el GDPR y las Leyes Locales</h2>
+          <p>Dependiendo de su jurisdicción, tiene derecho a:</p>
+          <ul className="list-disc list-inside my-2 pl-4">
+            <li>Acceder a sus datos personales</li>
+            <li>Solicitar la corrección o eliminación</li>
+            <li>Retirar el consentimiento</li>
+            <li>Oponerse o restringir cierto procesamiento</li>
+            <li>Portabilidad de datos</li>
+          </ul>
+          <p className="mt-2">Para ejercer cualquiera de estos derechos, envíenos un correo electrónico a support@aprov.tech.</p>
+          <p className="mt-2">Si es residente de la UE, también puede presentar una queja ante su Autoridad de Protección de Datos (APD) local.</p>
 
-          <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-3">8. ¿Cuáles Son Tus Derechos de Privacidad?</h2>
-          <p>
-            En algunas regiones (como el Espacio Económico Europeo y el Reino Unido), tienes ciertos derechos bajo las leyes de protección de datos aplicables.
-            Estos pueden incluir el derecho (i) a solicitar acceso y obtener una copia de tu información personal, (ii) a solicitar
-            rectificación o eliminación; (iii) a restringir el procesamiento de tu información personal; y (iv) si aplica,
-            a la portabilidad de datos. En ciertas circunstancias, también puedes tener el derecho de oponerte al procesamiento de tu información personal.
-          </p>
-
-          <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-3">9. Controles Para Funciones de No Rastreo (Do-Not-Track)</h2>
-          <p>
-            La mayoría de los navegadores web y algunos sistemas operativos móviles y aplicaciones móviles incluyen una función
-            o configuración de No Rastrear ("DNT") que puedes activar para señalar tu preferencia de privacidad de no tener datos sobre tus actividades
-            de navegación en línea monitoreadas y recopiladas. En esta etapa no se ha finalizado ningún estándar tecnológico uniforme para reconocer
-            e implementar señales DNT. Como tal, actualmente no respondemos a las señales DNT del navegador
-            o cualquier otro mecanismo que comunique automáticamente tu elección de no ser rastreado en línea.
-          </p>
-
-          <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-3">10. Actualizaciones a Este Aviso</h2>
-          <p>
-            Podemos actualizar este aviso de privacidad de vez en cuando. La versión actualizada se indicará con una fecha
-            actualizada de "Última actualización" y la versión actualizada será efectiva tan pronto como sea accesible. Te alentamos
-            a revisar este aviso de privacidad frecuentemente para estar informado/a de cómo estamos protegiendo tu información.
-          </p>
-
-          <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-3">11. ¿Cómo Puedes Contactarnos Sobre Este Aviso?</h2>
-          <p>
-            Si tienes preguntas o comentarios sobre este aviso, puedes enviarnos un correo electrónico a [Tu Email de Contacto] o por correo postal a:
-            <br />
-            Aprov
-            <br />
-            [Dirección de Tu Compañía]
+          <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-3">9. Información de Contacto</h2>
+          <p>Para preguntas o inquietudes relacionadas con esta Política de Privacidad o nuestras prácticas de datos, contáctenos en:</p>
+          <p className="mt-2">
+            <strong>Fibbonacci Labs LLC</strong><br />
+            Correo electrónico: support@aprov.tech<br />
+            Sitio web: <a href="https://www.aprov.tech" target="_blank" rel="noopener noreferrer">https://www.aprov.tech</a>
           </p>
         </article>
       </div>
