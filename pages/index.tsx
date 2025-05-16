@@ -23,6 +23,7 @@ import {
     AlertTriangle,
     Frown
 } from 'lucide-react';
+import Box from "@/components/Box";
 
 // Minimal placeholder SVG for icons - consider moving to a components/icons.tsx file
 const PlaceholderIcon = ({ className }: { className?: string }) => (
@@ -149,6 +150,7 @@ export default function HomePage() {
                     </div>
                 </div>
             </section>
+            <Box />
 
             {/* PAIN POINTS SECTION */}
             <section className="max-w-screen-xl mx-auto px-4 py-16">
