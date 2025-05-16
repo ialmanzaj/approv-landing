@@ -51,11 +51,12 @@ const Layout: React.FC<LayoutProps> = ({ children, title, description }) => {
                         <div className="font-bold text-lg tracking-tight">APROV</div>
                         <div className="flex gap-6">
                             <Link href="/privacy" legacyBehavior>
-                                <a className="text-sm hover:underline transition-colors duration-200 ease-in-out">Política de privacidad</a>
+                                <a className="text-sm hover:underline transition-colors duration-200 ease-in-out">Política de Privacidad</a>
                             </Link>
                             <Link href="/terms" legacyBehavior>
-                                <a className="text-sm hover:underline transition-colors duration-200 ease-in-out">Términos del servicio</a>
+                                <a className="text-sm hover:underline transition-colors duration-200 ease-in-out">Términos de Servicio</a>
                             </Link>
+                            <a href="mailto:support@aprov.tech" className="text-sm hover:underline transition-colors duration-200 ease-in-out">support@aprov.tech</a>
                         </div>
                         <div className="flex gap-4">
                             <a href="#" aria-label="Twitter" className="transition-all duration-200 ease-in-out hover:opacity-70 hover:scale-110">
@@ -70,7 +71,7 @@ const Layout: React.FC<LayoutProps> = ({ children, title, description }) => {
                         </div>
                     </div>
                     <div className="max-w-screen-xl mx-auto py-4 px-4 text-center text-xs text-gray-400 border-t border-gray-700">
-                        © {new Date().getFullYear()} Aprov. Todos los derechos reservados.
+                        © {new Date().getFullYear()} Fibbonacci Labs LLC. Todos los derechos reservados.
                     </div>
                 </footer>
             </div>
