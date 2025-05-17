@@ -19,10 +19,10 @@ export const Navbar: React.FC = () => {
                     {/* Desktop Menu */}
                     <div className="hidden md:flex items-center space-x-6">
                         <Link
-                            href="/pricing"
+                            href="/precio"
                             className="font-normal text-sm sm:text-base text-[#141414] cursor-pointer hover:opacity-80 transition-opacity"
                         >
-                            Pricing
+                            Precios
                         </Link>
 
                         <Link
@@ -30,7 +30,7 @@ export const Navbar: React.FC = () => {
                             href="https://app.aprov.tech"
                             target="_blank"
                         >
-                            Sign in
+                            Iniciar sesión
                         </Link>
                     </div>
 
@@ -58,11 +58,11 @@ export const Navbar: React.FC = () => {
                 <div className="md:hidden absolute top-full left-0 right-0 shadow-lg border-t border-gray-100 z-50">
                     <div className="px-4 py-3 space-y-3">
                         <Link
-                            href="/pricing"
+                            href="/precio"
                             className="block font-normal text-base text-[#141414] py-2 hover:opacity-80 transition-opacity"
                             onClick={() => setMobileMenuOpen(false)}
                         >
-                            Pricing
+                            Precios
                         </Link>
 
                         <Link
@@ -71,7 +71,7 @@ export const Navbar: React.FC = () => {
                             className="block w-full text-center font-semibold text-base text-white bg-[#141414] px-6 py-2.5 rounded-full hover:bg-[#2a2a2a] transition-colors"
                             onClick={() => setMobileMenuOpen(false)}
                         >
-                            Sign in
+                            Iniciar sesión
                         </Link>
                     </div>
                 </div>

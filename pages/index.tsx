@@ -159,18 +159,20 @@ export default function HomePage() {
                     Tan simple como debería ser.
                 </p>
                 <div className="flex gap-3 mb-6 max-sm:flex-col w-full max-w-[400px]">
-                    <button
+                    <Link
                         className="font-semibold text-sm text-white cursor-pointer bg-[#141414] px-[26px] py-4 rounded-[50px] border-2 border-solid border-black hover:bg-[#2a2a2a] transition-colors w-full"
-                        onClick={() => console.log('Start for free clicked')}
+                        href="https://app.aprov.tech"
+                        target="_blank"
                     >
                         Prueba gratis
-                    </button>
-                    <button
+                    </Link>
+                    <Link
                         className="font-semibold text-sm text-[#141414] cursor-pointer bg-white px-[26px] py-4 rounded-[50px] border-2 border-solid border-[#EBEBEB] hover:bg-[#f5f5f5] transition-colors w-full"
-                        onClick={() => console.log('Book a demo clicked')}
+                        href="https://cal.com/isaac-almanza"
+                        target="_blank"
                     >
                         Agenda una demo
-                    </button>
+                    </Link>
                 </div>
                 <p className="font-semibold text-xs text-[#7C7C7B]">
                     Sin tarjeta de crédito. Cancela cuando quieras.
