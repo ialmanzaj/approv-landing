@@ -1,0 +1,109 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# Prefer Server-Side Rendering (SSR) in Next.js
+
+<version>0.1.0</version>
+
+## Context
+- Apply this rule when deciding on data fetching and rendering strategies for pages or components in a Next.js application.
+- Prerequisite: The project is built using Next.js.
+
+## Requirements
+- 🚀 Prioritize Next.js App Router Server Components or `getServerSideProps` (Pages Router) for fetching data required for the initial page load.
+- 📉 Minimize client-side data fetching (`useEffect` + `fetch`) for content critical to the first paint or SEO.
+- 🤔 If Client Components (`'use client'`) are used for initial data rendering, provide a clear justification in comments or documentation, especially if SSR could have been an option.
+- ✅ Ensure data fetched on the server is passed as props to components.
+
+## Examples
+<example>
+  **Good (App Router - Server Component):** Data is fetched on the server and rendered directly.
+  ```typescript
+  // app/my-items/page.tsx
+  async function getItems() {
+    const res = await fetch('https://api.example.com/items');
+    // Handle errors as needed
+    if (!res.ok) throw new Error('Failed to fetch items');
+    return res.json();
+  }
+
+  export default async function ItemsPage() {
+    const items = await getItems();
+    return (
+      <ul>
+        {items.map((item: any) => <li key={item.id}>{item.name}</li>)}
+      </ul>
+    );
+  }
+  ```
+</example>
+
+<example>
+  **Good (Pages Router - getServerSideProps):** Data is fetched via `getServerSideProps` and passed to the page.
+  ```typescript
+  // pages/my-products.tsx
+  import { GetServerSideProps } from 'next';
+
+  export const getServerSideProps: GetServerSideProps = async (context) => {
+    const res = await fetch('https://api.example.com/products');
+    const products = await res.json();
+    // Handle errors or empty data as needed
+    return { props: { products } };
+  }
+
+  function ProductsPage({ products }) {
+    return (
+      <ul>
+        {products.map((product: any) => <li key={product.id}>{product.name}</li>)}
+      </ul>
+    );
+  }
+  export default ProductsPage;
+  ```
+</example>
+
+<example type="invalid">
+  **Needs Improvement:** Critical initial data fetched client-side using `useEffect`.
+  This delays content rendering and can be detrimental to SEO.
+  ```typescript
+  // components/ProductList.tsx or a page component
+  'use client'; // Or a Pages Router page without SSR for this data
+  import { useEffect, useState } from 'react';
+
+  interface Product {
+    id: string;
+    name: string;
+  }
+
+  function ProductList() {
+    const [products, setProducts] = useState<Product[] | null>(null);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+      fetch('https://api.example.com/products')
+        .then(res => res.json())
+        .then(data => {
+          setProducts(data);
+          setLoading(false);
+        })
+        .catch(error => {
+          console.error("Failed to fetch products:", error);
+          setLoading(false);
+        });
+    }, []);
+
+    if (loading) return <p>Loading products...</p>;
+    if (!products) return <p>No products found.</p>;
+
+    return (
+      <ul>
+        {products.map(product => <li key={product.id}>{product.name}</li>)}
+      </ul>
+    );
+  }
+  export default ProductList;
+  ```
+  **Reasoning:** This data should ideally be fetched server-side using Server Components (App Router) or `getServerSideProps` (Pages Router) to ensure it's available on initial load.
+</example>

@@ -1,60 +1,45 @@
+import React from "react"
 import { cn } from "@/lib/utils"
-import { CheckIcon, CheckCheck as CheckCheckIcon, Clock as ClockIcon } from "lucide-react"
-import { cva, type VariantProps } from "class-variance-authority"
 
-const chatBubbleVariants = cva(
-  "relative px-4 py-2 max-w-[80%] rounded-lg shadow-sm",
-  {
-    variants: {
-      variant: {
-        sent: "bg-whatsapp text-white ml-auto rounded-tr-none",
-        received: "bg-white text-neutral-900 mr-auto rounded-tl-none",
-      },
-      status: {
-        sending: "opacity-70",
-        sent: "opacity-100",
-        delivered: "opacity-100",
-        read: "opacity-100",
-      },
-    },
-    defaultVariants: {
-      variant: "sent",
-      status: "sent",
-    },
-  }
-)
-
-interface ChatBubbleProps
-  extends React.HTMLAttributes<HTMLDivElement>,
-    VariantProps<typeof chatBubbleVariants> {
+interface ChatBubbleProps {
+  children: React.ReactNode
+  variant?: "sent" | "received"
   time?: string
+  status?: "sent" | "delivered" | "read"
 }
 
-export function ChatBubble({ 
-  children, 
-  className, 
-  variant, 
-  status, 
-  time = "12:34 PM", 
-  ...props 
+export function ChatBubble({
+  children,
+  variant = "received",
+  time,
+  status
 }: ChatBubbleProps) {
   return (
-    <div
-      className={cn(chatBubbleVariants({ variant, status, className }))}
-      {...props}
-    >
+    <div className={cn(
+      "max-w-[85%] p-2 md:p-2.5 lg:p-3 rounded-lg shadow-sm relative",
+      variant === "sent" ? "ml-auto bg-[#D9FDD3]" : "bg-white"
+    )}>
       {children}
-      <div className="flex items-center justify-end space-x-1 mt-1 opacity-70 text-[10px]">
-        <span>{time}</span>
-        {variant === "sent" && (
-          <>
-            {status === "sending" && <ClockIcon className="h-3 w-3" />}
-            {status === "sent" && <CheckIcon className="h-3 w-3" />}
-            {status === "delivered" && <CheckCheckIcon className="h-3 w-3" />}
-            {status === "read" && <CheckCheckIcon className="h-3 w-3 text-blue-400" />}
-          </>
+      
+      <div className="flex items-center justify-end mt-1">
+        {time && (
+          <span className="text-[8px] md:text-[9px] lg:text-[10px] text-gray-500 mr-1">{time}</span>
+        )}
+        
+        {variant === "sent" && status === "read" && (
+          <svg viewBox="0 0 18 18" className="w-3 h-3 md:w-3.5 md:h-3.5 lg:w-4 lg:h-4 text-[#53BDEB]">
+            <path stroke="currentColor" strokeWidth="1.5" d="M3.5 7.5L7 11 14.5 3.5" />
+            <path stroke="currentColor" strokeWidth="1.5" d="M7.5 7.5L11 11 18.5 3.5" transform="translate(-5, 0)" />
+          </svg>
         )}
       </div>
+      
+      <div className={cn(
+        "absolute bottom-0 transform translate-y-[4px] md:translate-y-[5px] w-2 h-2 md:w-2.5 md:h-2.5 lg:w-3 lg:h-3 rotate-45",
+        variant === "sent" ? 
+          "right-0 translate-x-[4px] md:translate-x-[5px] bg-[#D9FDD3]" : 
+          "left-0 translate-x-[-4px] md:translate-x-[-5px] bg-white"
+      )}></div>
     </div>
   )
 } 
