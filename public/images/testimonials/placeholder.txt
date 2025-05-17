@@ -1,0 +1,19 @@
+Testimonial Images
+
+This directory should contain the following high-quality testimonial images:
+1. testimonial-1.jpg - Professional headshot for Dayanara (Cofundadora, Ademsa)
+2. testimonial-2.jpg - Professional headshot for Brandon M. (Director, Grupo Inmobiliario BM)
+3. testimonial-3.jpg - Professional headshot for James S. (Administrador, Edificio Mirador)
+
+Image specifications:
+- Recommended size: 300x300 pixels minimum (square aspect ratio)
+- Professional, high-quality headshots
+- Consistent lighting and style across all images
+- Neutral or corporate backgrounds
+
+For best results, avoid stock photos and use actual client photos when possible.
+If actual client photos are not available, consider hiring a photographer or using 
+high-quality professional headshots that match your target demographics.
+
+Note: The current code references these specific file paths, so maintain the same filenames
+when adding your images. 

@@ -26,7 +26,7 @@ export default function HomePage() {
             <WorkflowSection />
 
             {/* FEATURE GRID */}
-            <FeatureGrid />
+          {/*   <FeatureGrid /> */}
 
             {/* TESTIMONIAL GRID */}
             <TestimonialGrid />

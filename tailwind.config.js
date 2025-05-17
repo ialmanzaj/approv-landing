@@ -14,6 +14,9 @@ module.exports = {
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
   		},
+  		blur: {
+  		  '3xl': '64px',
+  		},
   		colors: {
   			primary: {
   				DEFAULT: '#1A365D',
