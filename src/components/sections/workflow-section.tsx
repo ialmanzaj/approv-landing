@@ -27,7 +27,7 @@ export function WorkflowSection() {
   return (
     <section className="max-w-screen-xl mx-auto px-4 py-16">
       <h2 className="text-3xl md:text-4xl font-heading font-semibold text-primary text-center mb-12">
-        ¿Cómo funciona Aprov?
+        ¿Cómo funciona?
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {workflowSteps.map((item, i) => {
