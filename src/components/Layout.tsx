@@ -6,6 +6,7 @@ import {
     Linkedin,
     Mail
 } from 'lucide-react';
+import { Navbar } from './header';
 
 interface LayoutProps {
     children: React.ReactNode;
@@ -15,7 +16,7 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children, title, description }) => {
     const pageTitle = title ? `${title} - APROV` : 'APROV - Automatiza Aprobaciones';
-    const pageDescription = description || "Automatiza cada aprobación, reduce semanas de idas y vueltas a minutos con Aprov.";
+    const pageDescription = description || "Automatiza cada aprobación, reduce semanas a minutos con Aprov.";
 
     return (
         <>
@@ -24,21 +25,10 @@ const Layout: React.FC<LayoutProps> = ({ children, title, description }) => {
                 <meta name="description" content={pageDescription} />
                 {/* <link rel="icon" href="/favicon.ico" /> */}
             </Head>
-            <div className="min-h-screen w-full bg-[#f8fafc] font-sans flex flex-col">
+            <div className="min-h-screen w-full bg-hero-bg font-sans flex flex-col">
                 {/* HEADER */}
-                <header className="bg-[#000d49] w-full">
-                    <div className="max-w-screen-xl mx-auto px-4 flex items-center justify-between py-6">
-                        <Link href="/" className="text-white text-2xl font-bold tracking-tight" style={{ fontFamily: 'PP Mori, Inter, sans-serif' }}>
-                            APROV
-                        </Link>
-                        <a
-                            href="/#demo" // Points to the demo section on the homepage
-                            className="bg-white text-black font-semibold px-6 py-3 rounded-full transform transition-transform duration-300 ease-in-out hover:scale-105 text-base shadow"
-                        >
-                            Solicita una demo
-                        </a>
-                    </div>
-                </header>
+                <Navbar />
+
 
                 {/* MAIN CONTENT AREA */}
                 <main className="flex-grow w-full">

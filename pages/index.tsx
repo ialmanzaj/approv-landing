@@ -24,6 +24,7 @@ import {
     Frown
 } from 'lucide-react';
 import Box from "@/components/Box";
+import Link from "next/link";
 
 // Minimal placeholder SVG for icons - consider moving to a components/icons.tsx file
 const PlaceholderIcon = ({ className }: { className?: string }) => (
@@ -131,26 +132,51 @@ export default function HomePage() {
             {/* Header component removed, handled by Layout */}
 
             {/* HERO SECTION */}
-            <section id="demo" className="w-full bg-[#000d49] py-20 sm:py-28">
-                <div className="max-w-screen-xl mx-auto flex flex-col items-center px-4">
-                    <h1 className="text-5xl lg:text-6xl font-semibold text-white text-center max-w-3xl tracking-tight" style={{ fontFamily: 'PP Mori, Inter, sans-serif' }}>
-                        Automatiza cada aprobación, <br className="hidden sm:block" /> Convierte semanas de espera en minutos.
-                    </h1>
-                    <p className="text-lg text-[#afdafa] mt-6 max-w-xl text-center">
-                        Centraliza tus aprobaciones, obtén trazabilidad y elimina el caos.
-                    </p>
-                    <div className="flex flex-col items-center mt-8">
-                        <a
-                            href="/#demo" // Points to the demo section on the homepage
-                            className="bg-white text-black px-8 py-4 rounded-full font-semibold text-lg transform transition-transform duration-300 ease-in-out hover:scale-105 shadow-lg"
-                        >
-                            Reserva una demo
-                        </a>
-                        <p className="text-sm text-[#afdafa] mt-2">Descubre cómo en 15 min.</p>
+            <section className="flex flex-col items-center text-center py-[60px] px-5">
+                <Link
+                    href="#whatsapp-links"
+                    className="inline-flex hover:opacity-90 transition-opacity"
+                >
+                    <div className="flex items-center gap-2 bg-[#EDECEB] mb-6 px-4 py-1 rounded-[100px]">
+                        <div className="text-[#EC5B4C] font-semibold text-[13px] bg-white px-3 py-1 rounded-[100px]">
+                            Nuevo
+                        </div>
+                        <div className="text-[#030303] font-semibold text-[13px]">
+                            Enlaces por WhatsApp
+                        </div>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12L10 8L6 4" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
                     </div>
+                </Link>
+                <h1 className="font-semibold text-[86px] leading-[90px] text-[#141414] mb-6 max-md:text-6xl max-md:leading-[70px] max-sm:text-[40px] max-sm:leading-[50px]">
+                    <span>Aprobaciones en minutos,</span>
+                    <br />
+                    <span>no en días</span>
+                </h1>
+                <p className="font-normal text-[22px] text-[#141414] max-w-[988px] mb-8 max-sm:text-lg">
+                    Gestiona todas tus aprobaciones por WhatsApp. Sin apps nuevas, sin complicaciones.
+                    Tan simple como debería ser.
+                </p>
+                <div className="flex gap-3 mb-6 max-sm:flex-col w-full max-w-[400px]">
+                    <button
+                        className="font-semibold text-sm text-white cursor-pointer bg-[#141414] px-[26px] py-4 rounded-[50px] border-2 border-solid border-black hover:bg-[#2a2a2a] transition-colors w-full"
+                        onClick={() => console.log('Start for free clicked')}
+                    >
+                        Prueba gratis
+                    </button>
+                    <button
+                        className="font-semibold text-sm text-[#141414] cursor-pointer bg-white px-[26px] py-4 rounded-[50px] border-2 border-solid border-[#EBEBEB] hover:bg-[#f5f5f5] transition-colors w-full"
+                        onClick={() => console.log('Book a demo clicked')}
+                    >
+                        Agenda una demo
+                    </button>
                 </div>
+                <p className="font-semibold text-xs text-[#7C7C7B]">
+                    Sin tarjeta de crédito. Cancela cuando quieras.
+                </p>
             </section>
-           
+
 
             {/* PAIN POINTS SECTION */}
             <section className="max-w-screen-xl mx-auto px-4 py-16">
@@ -178,7 +204,7 @@ export default function HomePage() {
                     {workflowSteps.map((item, i) => (
                         <div
                             key={i}
-                            className="rounded-2xl p-6 bg-[#f8fafc] border border-gray-200 shadow-sm text-center flex flex-col items-center transform transition-all duration-300 ease-in-out hover:shadow-md hover:-translate-y-1 h-full"
+                            className="rounded-2xl p-6 bg-white border border-gray-200 shadow-sm text-center flex flex-col items-center transform transition-all duration-300 ease-in-out hover:shadow-md hover:-translate-y-1 h-full"
                         >
                             <div className="w-12 h-12 flex items-center justify-center mb-4 text-indigo-500">
                                 <item.Icon className="w-8 h-8" />
@@ -232,7 +258,7 @@ export default function HomePage() {
                     ))}
                 </div>
             </section>
-            
+
 
             {/* FAQ SECTION */}
             <section className="max-w-screen-xl mx-auto px-4 py-16">
