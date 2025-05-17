@@ -150,11 +150,11 @@ export default function HomePage() {
                     </div>
                 </div>
             </section>
-            <Box />
+           
 
             {/* PAIN POINTS SECTION */}
             <section className="max-w-screen-xl mx-auto px-4 py-16">
-                <h2 className="text-3xl font-semibold text-[#000d49] text-center mb-12">¿Te Suenan Familiares Estos Problemas?</h2>
+                <h2 className="text-3xl font-semibold text-[#000d49] text-center mb-12">¿Estás Lidiando con Estos Problemas en tu Día a Día?</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {painPoints.map((pain, i) => (
                         <div
@@ -193,6 +193,7 @@ export default function HomePage() {
 
             {/* FEATURE GRID */}
             <section className="max-w-screen-xl mx-auto px-4 py-16">
+                <h2 className="text-3xl font-semibold text-[#000d49] text-center mb-12">Características</h2>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-2">
                     {features.map((feature, i) => (
                         <div
@@ -231,6 +232,7 @@ export default function HomePage() {
                     ))}
                 </div>
             </section>
+            
 
             {/* FAQ SECTION */}
             <section className="max-w-screen-xl mx-auto px-4 py-16">

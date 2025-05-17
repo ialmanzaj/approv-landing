@@ -28,8 +28,8 @@ const Layout: React.FC<LayoutProps> = ({ children, title, description }) => {
                 {/* HEADER */}
                 <header className="bg-[#000d49] w-full">
                     <div className="max-w-screen-xl mx-auto px-4 flex items-center justify-between py-6">
-                        <Link href="/" legacyBehavior>
-                            <a className="text-white text-2xl font-bold tracking-tight" style={{ fontFamily: 'PP Mori, Inter, sans-serif' }}>APROV</a>
+                        <Link href="/" className="text-white text-2xl font-bold tracking-tight" style={{ fontFamily: 'PP Mori, Inter, sans-serif' }}>
+                            APROV
                         </Link>
                         <a
                             href="/#demo" // Points to the demo section on the homepage
@@ -50,11 +50,11 @@ const Layout: React.FC<LayoutProps> = ({ children, title, description }) => {
                     <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row gap-6 md:gap-0 justify-between items-center py-6 px-4">
                         <div className="font-bold text-lg tracking-tight">APROV</div>
                         <div className="flex gap-6">
-                            <Link href="/privacy" legacyBehavior>
-                                <a className="text-sm hover:underline transition-colors duration-200 ease-in-out">Política de Privacidad</a>
+                            <Link href="/privacy" className="text-sm hover:underline transition-colors duration-200 ease-in-out">
+                                Política de Privacidad
                             </Link>
-                            <Link href="/terms" legacyBehavior>
-                                <a className="text-sm hover:underline transition-colors duration-200 ease-in-out">Términos de Servicio</a>
+                            <Link href="/terms" className="text-sm hover:underline transition-colors duration-200 ease-in-out">
+                                Términos de Servicio
                             </Link>
                             <a href="mailto:support@aprov.tech" className="text-sm hover:underline transition-colors duration-200 ease-in-out">support@aprov.tech</a>
                         </div>
