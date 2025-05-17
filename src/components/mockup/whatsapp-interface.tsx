@@ -10,21 +10,19 @@ interface WhatsAppInterfaceProps {
 }
 
 export function WhatsAppInterface({ showChat = false }: WhatsAppInterfaceProps) {
-  const [isVisible, setIsVisible] = useState(showChat)
+  const [isVisible, setIsVisible] = useState(false)
   
   useEffect(() => {
-    // Mostrar chat después de 1 segundo si showChat es true
-    if (showChat) {
-      const timeout = setTimeout(() => {
-        setIsVisible(true)
-      }, 1000)
-      
-      return () => clearTimeout(timeout)
-    }
+    // Mostrar chat inmediatamente o con un pequeño retraso según el caso
+    const timeout = setTimeout(() => {
+      setIsVisible(true)
+    }, showChat ? 300 : 600)
+    
+    return () => clearTimeout(timeout)
   }, [showChat])
   
   return (
-    <div className="flex flex-col h-full w-full">
+    <div className="flex flex-col h-full w-full overflow-hidden" style={{ backgroundColor: '#F5F2EA' }}>
       <WhatsAppHeader />
       <WhatsAppChat showChat={isVisible} />
       <WhatsAppInput />

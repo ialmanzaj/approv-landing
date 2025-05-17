@@ -26,9 +26,15 @@ module.exports = {
   				dark: '#3A7DD0',
   			},
   			whatsapp: {
-  				DEFAULT: '#25D366',
-  				light: '#34E676',
-  				dark: '#1CB354',
+  				DEFAULT: '#00A884',
+  				light: '#25D366',
+  				dark: '#008069',
+  				chat: {
+  				  bg: '#F5F2EA',
+  				  sent: '#E7FFDB',
+  				  statusbar: '#54656F',
+  				  inputBg: '#F0F2F5'
+  				}
   			},
   			neutral: {
   				50: '#F9FAFB',
@@ -117,7 +123,9 @@ module.exports = {
   			'slide-right': 'slideRight 0.5s ease-out',
   			'bounce-subtle': 'bounceSubtle 2s infinite',
   			'accordion-down': 'accordion-down 0.2s ease-out',
-  			'accordion-up': 'accordion-up 0.2s ease-out'
+  			'accordion-up': 'accordion-up 0.2s ease-out',
+  			'pulse-subtle': 'pulseSubtle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+  			'typing': 'typing 1.5s infinite'
   		},
   		keyframes: {
   			fadeIn: {
@@ -152,16 +160,28 @@ module.exports = {
   				from: { height: 'var(--radix-accordion-content-height)' },
   				to: { height: '0' },
   			},
+  			pulseSubtle: {
+  				'0%, 100%': { opacity: '1' },
+  				'50%': { opacity: '0.7' },
+  			},
+  			typing: {
+  				'0%': { opacity: '0.3' },
+  				'50%': { opacity: '1' },
+  				'100%': { opacity: '0.3' },
+  			}
   		},
   		backgroundImage: {
   			'gradient-primary': 'linear-gradient(to right, var(--tw-gradient-stops))',
   			'hero-pattern': "url('/images/hero-pattern.svg')",
+  			'whatsapp-header': 'linear-gradient(to bottom, #00A884, #008069)',
   		},
   		boxShadow: {
   			'soft': '0 2px 15px 0 rgba(0, 0, 0, 0.05)',
   			'medium': '0 4px 20px 0 rgba(0, 0, 0, 0.1)',
   			'hard': '0 10px 25px 0 rgba(0, 0, 0, 0.15)',
   			'inner-soft': 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.05)',
+  			'phone': '0 0 0 4px rgba(20, 20, 20, 0.9), 0 25px 50px rgba(0, 0, 0, 0.3), 0 10px 30px rgba(0, 0, 0, 0.2)',
+  			'message': '0 1px 1px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.05)',
   		},
   		container: {
   			center: true,

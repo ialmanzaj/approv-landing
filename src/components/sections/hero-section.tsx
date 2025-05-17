@@ -6,12 +6,12 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight, ArrowDown } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import { PhoneFrame } from "@/components/ui/phone-frame"
-import { WhatsAppInterface } from "@/components/ui/whatsapp-interface"
+import { PhoneFrame } from "@/components/mockup/phone-frame"
+import { WhatsAppInterface } from "@/components/mockup/whatsapp-interface"
 
 export function HeroSection() {
   const [approvalCount, setApprovalCount] = useState(2543)
-  const [showChat, setShowChat] = useState(false)
+  const [showChat, setShowChat] = useState(true)
 
   // Simular incremento de aprobaciones
   useEffect(() => {
@@ -19,14 +19,8 @@ export function HeroSection() {
       setApprovalCount(prev => prev + Math.floor(Math.random() * 5))
     }, 10000)
 
-    // Mostrar chat después de 1 segundo
-    const timeout = setTimeout(() => {
-      setShowChat(true)
-    }, 1000)
-
     return () => {
       clearInterval(interval)
-      clearTimeout(timeout)
     }
   }, [])
 

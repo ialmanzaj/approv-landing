@@ -6,31 +6,31 @@ interface PhoneFrameProps {
 
 export function PhoneFrame({ children }: PhoneFrameProps) {
   return (
-    <div className="animate-slide-up relative w-[260px] h-[520px] md:w-[280px] md:h-[570px] lg:w-[310px] lg:h-[630px] bg-black rounded-[38px] md:rounded-[42px] lg:rounded-[46px] shadow-[0_0_0_6px_rgba(20,20,20,0.9),0_8px_30px_rgba(0,0,0,0.4),0_2px_10px_5px_rgba(120,120,120,0.1)] md:shadow-[0_0_0_7px_rgba(20,20,20,0.9),0_8px_30px_rgba(0,0,0,0.4),0_2px_10px_5px_rgba(120,120,120,0.1)] lg:shadow-[0_0_0_8px_rgba(20,20,20,0.9),0_8px_30px_rgba(0,0,0,0.4),0_2px_10px_5px_rgba(120,120,120,0.1)] p-[3px] md:p-[4px] overflow-hidden">
+    <div className="animate-slide-up relative w-[260px] h-[520px] md:w-[280px] md:h-[570px] lg:w-[310px] lg:h-[630px] bg-black rounded-[44px] md:rounded-[44px] lg:rounded-[44px] shadow-phone p-[3px] md:p-[4px] overflow-hidden">
       {/* Detalles físicos del iPhone */}
-      <div className="absolute top-[35%] -right-[3px] w-[3px] h-[35px] bg-neutral-800 rounded-l-lg"></div>
+      {/* Botón de encendido */}
       <div className="absolute top-[110px] -right-[3px] w-[3px] h-[55px] bg-neutral-800 rounded-l-lg"></div>
-      <div className="absolute top-[100px] -left-[3px] w-[3px] h-[55px] bg-neutral-800 rounded-r-lg"></div>
+      {/* Botones de volumen */}
+      <div className="absolute top-[90px] -left-[3px] w-[3px] h-[30px] bg-neutral-800 rounded-r-lg"></div>
+      <div className="absolute top-[130px] -left-[3px] w-[3px] h-[30px] bg-neutral-800 rounded-r-lg"></div>
+      {/* Botón de silencio */}
+      <div className="absolute top-[50px] -left-[3px] w-[3px] h-[20px] bg-neutral-800 rounded-r-lg"></div>
 
-      {/* Notch del iPhone */}
-      <div className="absolute top-0 left-[50%] transform translate-x-[-50%] w-[140px] md:w-[160px] lg:w-[180px] h-[28px] md:h-[32px] lg:h-[35px] bg-black rounded-b-[18px] md:rounded-b-[20px] lg:rounded-b-[22px] z-30"></div>
-      <div className="absolute top-[10px] md:top-[12px] left-[50%] transform translate-x-[-50%] flex space-x-2 z-30">
-        <div className="w-[6px] h-[6px] md:w-[7px] md:h-[7px] lg:w-[8px] lg:h-[8px] rounded-full bg-gray-700"></div>
-        <div className="w-[8px] h-[8px] md:w-[9px] md:h-[9px] lg:w-[10px] lg:h-[10px] rounded-full bg-gray-800"></div>
-        <div className="w-[8px] h-[5px] md:w-[9px] md:h-[5px] lg:w-[10px] lg:h-[6px] rounded-full bg-gray-700"></div>
-      </div>
+      
 
       {/* Barra de home iPhone */}
-      <div className="absolute bottom-[6px] md:bottom-[7px] lg:bottom-[8px] left-[50%] transform translate-x-[-50%] w-[100px] md:w-[120px] lg:w-[134px] h-[4px] md:h-[5px] bg-gray-700 rounded-full z-30"></div>
+      <div className="absolute bottom-[6px] md:bottom-[7px] lg:bottom-[8px] left-[50%] transform translate-x-[-50%] w-[110px] md:w-[120px] lg:w-[134px] h-[4px] md:h-[5px] bg-neutral-600 rounded-full z-30"></div>
 
-      {/* Reflejo sutil en pantalla */}
-      <div className="absolute inset-0 rounded-[35px] md:rounded-[38px] lg:rounded-[42px] bg-gradient-to-b from-neutral-800 to-black overflow-hidden">
-        <div className="absolute top-0 left-0 right-0 h-[25%] bg-gradient-to-b from-white/10 to-transparent pointer-events-none z-10 opacity-20"></div>
-        <div className="absolute inset-[1px] rounded-[34px] md:rounded-[37px] lg:rounded-[41px] shadow-[inset_0_0_8px_rgba(0,0,0,0.5)] pointer-events-none z-[5]"></div>
+      {/* Reflejo sutil en pantalla mejorado */}
+      <div className="absolute inset-0 rounded-[40px] md:rounded-[40px] lg:rounded-[40px] bg-gradient-to-b from-neutral-800 to-black overflow-hidden">
+        <div className="absolute top-0 left-0 right-0 h-[25%] bg-gradient-to-b from-white/15 to-transparent pointer-events-none z-10 opacity-40"></div>
+        <div className="absolute inset-x-0 bottom-0 h-[15%] bg-gradient-to-t from-black/20 to-transparent pointer-events-none z-10 opacity-30"></div>
+        <div className="absolute inset-[1px] rounded-[39px] md:rounded-[39px] lg:rounded-[39px] shadow-[inset_0_0_15px_rgba(0,0,0,0.7)] pointer-events-none z-[5]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(255,255,255,0.05),transparent_70%)] pointer-events-none z-[6]"></div>
 
         {/* Pantalla del iPhone */}
-        <div className="absolute inset-0 rounded-[34px] md:rounded-[37px] lg:rounded-[41px] overflow-hidden flex flex-col">
-          {/* Barra de estado iOS */}
+        <div className="absolute inset-0 rounded-[39px] md:rounded-[39px] lg:rounded-[39px] overflow-hidden flex flex-col">
+          {/* Barra de estado iOS mejorada */}
           <div className="bg-black h-8 md:h-9 lg:h-10 flex justify-between items-center px-5 md:px-6 lg:px-8 text-white text-[10px] md:text-[11px] lg:text-xs pt-1 md:pt-2">
             <div className="ml-1 font-medium">10:42</div>
             <div className="absolute left-[50%] transform translate-x-[-50%] top-[26px] md:top-[28px] lg:top-[31px] w-[7px] h-[7px] md:w-[8px] md:h-[8px] lg:w-[9px] lg:h-[9px] rounded-full bg-green-500 z-20"></div>
