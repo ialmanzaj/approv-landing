@@ -25,7 +25,7 @@ const Layout: React.FC<LayoutProps> = ({ children, title, description }) => {
                 <meta name="description" content={pageDescription} />
                 {/* <link rel="icon" href="/favicon.ico" /> */}
             </Head>
-            <div className="min-h-screen w-full bg-hero-bg font-sans flex flex-col">
+            <div className="min-h-screen w-full font-sans flex flex-col">
                 {/* HEADER */}
                 <Navbar />
 
