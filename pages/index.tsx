@@ -34,10 +34,10 @@ export default function HomePage() {
             {/* FAQ SECTION */}
             <section className="max-w-screen-xl mx-auto px-4 py-16 bg-neutral-50">
                 <div className="mt-12 max-w-3xl mx-auto">
-                    <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary text-center pb-4">
+                    <h2 className="text-heading text-primary text-center pb-4">
                         Preguntas frecuentes
                     </h2>
-                    <p className="text-lg text-neutral-600 text-center mb-8 md:mb-10">
+                    <p className="text-body text-neutral-600 text-center mb-8 md:mb-10">
                         Todo lo que necesitas saber sobre el producto
                     </p>
                     <Accordion
@@ -95,12 +95,12 @@ export default function HomePage() {
                                 className="bg-white rounded-xl shadow-soft"
                             >
                                 <AccordionTrigger
-                                    className="w-full px-6 py-4 text-left text-base font-medium text-primary hover:no-underline focus:outline-none"
+                                    className="text-ui w-full px-6 py-4 text-left font-medium text-primary hover:no-underline focus:outline-none"
                                 >
                                     {item.q}
                                 </AccordionTrigger>
                                 <AccordionContent
-                                    className="px-6 pb-6 pt-0 text-neutral-600 leading-relaxed"
+                                    className="text-ui px-6 pb-6 pt-0 text-neutral-600 leading-relaxed"
                                 >
                                     {item.a}
                                 </AccordionContent>

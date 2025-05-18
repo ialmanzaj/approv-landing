@@ -32,14 +32,14 @@ export function HeroSection() {
       {/* Columna izquierda: Texto y CTA */}
       <div className="relative z-10 flex flex-col justify-center px-6 md:px-12 lg:px-16 py-20">
         <div className="animate-fade-in">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold tracking-tight text-neutral-900 leading-tight">
-            <div>Aprobaciones en <span className="text-whatsapp font-extrabold">minutos</span>,</div>
-            <div>no en <span className=" text-neutral-600 decoration-2">días</span></div>
+          <h1 className="text-display text-gray-900">
+            <div>Aprobaciones en <span className="text-blue-600">minutos</span>,</div>
+            <div>no en <span className="text-gray-600">días</span></div>
           </h1>
 
-          <p className="mt-6 text-lg md:text-xl text-neutral-600 max-w-xl">
-            Gestiona todas tus aprobaciones por WhatsApp. Sin apps nuevas, sin complicaciones.
-            Tan simple como debería ser.
+          <p className="text-body text-gray-600 mt-6 max-w-xl">
+            Gestiona todas tus aprobaciones por WhatsApp.
+            Sin apps nuevas, sin complicaciones.
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
@@ -47,7 +47,7 @@ export function HeroSection() {
               <Button
                 variant="whatsapp"
                 size="xl"
-                className="group relative overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl w-full"
+                className="text-ui bg-blue-600 text-white rounded-lg group relative overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl w-full"
               >
                 <span className="relative z-10">Comenzar gratis</span>
                 <ArrowRight className="ml-2 h-5 w-5 relative z-10" />
@@ -58,18 +58,18 @@ export function HeroSection() {
               <Button
                 variant="outline"
                 size="xl"
-                className="border-neutral-300 w-full text-neutral-700 hover:scale-105 transition-all duration-300"
+                className="text-ui border-neutral-300 w-full text-neutral-700 hover:scale-105 transition-all duration-300"
               >
                 Ver demostración
               </Button>
             </Link>
           </div>
 
-          <div className="mt-6 text-sm text-neutral-500">
+          <div className="text-ui mt-6 text-neutral-500">
             Sin tarjeta de crédito. Cancela cuando quieras.
           </div>
 
-          <div className="mt-12 flex items-center space-x-2 text-sm text-neutral-600">
+          <div className="mt-12 flex items-center space-x-2 text-ui text-neutral-600">
             <div className="flex -space-x-1">
               {Array.from({ length: 5 }).map((_, i) => (
                 <div

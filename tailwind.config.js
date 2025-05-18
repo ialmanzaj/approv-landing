@@ -101,10 +101,50 @@ module.exports = {
   			}
   		},
   		fontFamily: {
-  			sans: ['Inter var', 'Inter', 'system-ui', 'sans-serif'],
-  			heading: ['Inter var', 'Inter', 'system-ui', 'sans-serif'],
+  			sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
+  			heading: ['var(--font-outfit)', 'system-ui', 'sans-serif'],
   			body: ['Roboto', 'system-ui', 'sans-serif'],
   		},
+      fontWeight: {
+        regular: '400',
+        medium: '500',
+        semibold: '600',
+        bold: '700',
+      },
+      typography: {
+        display: {
+          css: {
+            fontFamily: 'var(--font-outfit)',
+            fontWeight: '600',
+            fontSize: 'clamp(48px, 5vw, 72px)',
+            lineHeight: '1.1',
+          }
+        },
+        heading: {
+          css: {
+            fontFamily: 'var(--font-outfit)',
+            fontWeight: '500',
+            fontSize: 'clamp(24px, 3vw, 36px)',
+            lineHeight: '1.2',
+          }
+        },
+        body: {
+          css: {
+            fontFamily: 'var(--font-inter)',
+            fontWeight: '400',
+            fontSize: 'clamp(16px, 1.1vw, 18px)',
+            lineHeight: '1.5',
+          }
+        },
+        ui: {
+          css: {
+            fontFamily: 'var(--font-inter)',
+            fontWeight: '400',
+            fontSize: 'clamp(14px, 0.9vw, 16px)',
+            lineHeight: '1.5',
+          }
+        }
+      },
   		fontSize: {
   			'2xs': ['0.64rem', { lineHeight: '1rem' }],
   			'xs': ['0.75rem', { lineHeight: '1rem' }],
@@ -117,7 +157,36 @@ module.exports = {
   			'4xl': ['2.25rem', { lineHeight: '2.5rem' }],
   			'5xl': ['3rem', { lineHeight: '1' }],
   			'6xl': ['3.75rem', { lineHeight: '1' }],
-  		},
+      },
+      // Define text styles for specific uses
+      textStyles: {
+        display: {
+          fontFamily: 'var(--font-outfit)',
+          fontWeight: '600',
+          fontSize: ['48px', '72px'],
+          lineHeight: '1.1',
+          letterSpacing: '-0.02em',
+        },
+        heading: {
+          fontFamily: 'var(--font-outfit)',
+          fontWeight: '500',
+          fontSize: ['24px', '36px'],
+          lineHeight: '1.2',
+          letterSpacing: '-0.01em',
+        },
+        body: {
+          fontFamily: 'var(--font-inter)',
+          fontWeight: '400',
+          fontSize: ['16px', '18px'],
+          lineHeight: '1.5',
+        },
+        ui: {
+          fontFamily: 'var(--font-inter)',
+          fontWeight: '400',
+          fontSize: ['14px', '16px'],
+          lineHeight: '1.5',
+        },
+      },
   		animation: {
   			'fade-in': 'fadeIn 0.5s ease-out',
   			'slide-up': 'slideUp 0.5s ease-out',
@@ -210,5 +279,38 @@ module.exports = {
     require('@tailwindcss/typography'),
     require('@tailwindcss/forms'),
     require('@tailwindcss/aspect-ratio'),
+    // Add a custom plugin to generate text style classes
+    function({ addComponents, theme }) {
+      const textStyles = {
+        '.text-display': {
+          fontFamily: `${theme('fontFamily.heading')}`,
+          fontWeight: theme('fontWeight.semibold'),
+          fontSize: 'clamp(48px, 5vw, 72px)',
+          lineHeight: '1.1',
+          letterSpacing: '-0.02em',
+        },
+        '.text-heading': {
+          fontFamily: `${theme('fontFamily.heading')}`,
+          fontWeight: theme('fontWeight.medium'),
+          fontSize: 'clamp(24px, 3vw, 36px)',
+          lineHeight: '1.2',
+          letterSpacing: '-0.01em',
+        },
+        '.text-body': {
+          fontFamily: `${theme('fontFamily.sans')}`,
+          fontWeight: theme('fontWeight.regular'),
+          fontSize: 'clamp(16px, 1.1vw, 18px)',
+          lineHeight: '1.5',
+        },
+        '.text-ui': {
+          fontFamily: `${theme('fontFamily.sans')}`,
+          fontWeight: theme('fontWeight.regular'),
+          fontSize: 'clamp(14px, 0.9vw, 16px)',
+          lineHeight: '1.5',
+        },
+      };
+
+      addComponents(textStyles);
+    },
   ],
 };
