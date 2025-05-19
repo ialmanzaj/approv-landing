@@ -18,13 +18,13 @@ export const Navbar: React.FC = () => {
 
                     {/* Desktop Menu */}
                     <div className="hidden md:flex items-center space-x-6">
-                        <Link
+                        {/* <Link
                             href="/precio"
                             className="font-normal text-sm sm:text-base text-[#141414] cursor-pointer hover:opacity-80 transition-opacity"
                         >
                             Precios
                         </Link>
-
+ */}
                         <Link
                             className="font-semibold text-sm sm:text-base text-white cursor-pointer bg-[#141414] px-6 py-2.5 rounded-full hover:bg-[#2a2a2a] transition-colors"
                             href="https://app.aprov.tech"
@@ -57,13 +57,13 @@ export const Navbar: React.FC = () => {
             {mobileMenuOpen && (
                 <div className="md:hidden absolute top-full left-0 right-0 shadow-lg border-t border-gray-100 z-50">
                     <div className="px-4 py-3 space-y-3">
-                        <Link
+                       {/*  <Link
                             href="/precio"
                             className="block font-normal text-base text-[#141414] py-2 hover:opacity-80 transition-opacity"
                             onClick={() => setMobileMenuOpen(false)}
                         >
                             Precios
-                        </Link>
+                        </Link> */}
 
                         <Link
                             href="https://app.aprov.tech"

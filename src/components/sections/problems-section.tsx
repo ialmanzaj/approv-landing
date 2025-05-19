@@ -279,7 +279,7 @@ export function ProblemsSection() {
               <div
                 key={index}
                 className={cn(
-                  "rounded-xl sm:rounded-[14px] border bg-white transition-all duration-500 ease-[cubic-bezier(0.25,0.1,0.25,1)] animate-slide-up group relative overflow-hidden",
+                  "rounded-xl sm:rounded-[14px] border bg-white transition-all duration-500 ease-&lsqb;cubic-bezier(0.25,0.1,0.25,1)&rsqb; animate-slide-up group relative overflow-hidden",
                   isActive
                     ? "border-[#4A63DD] shadow-[0_8px_30px_-8px_rgba(74,99,221,0.16)] sm:shadow-[0_10px_40px_-15px_rgba(74,99,221,0.18)] z-20" 
                     : "border-[#E8E9F0] shadow-[0_5px_25px_-15px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_35px_-12px_rgba(0,0,0,0.08)] hover:border-[#D8DCF0]",

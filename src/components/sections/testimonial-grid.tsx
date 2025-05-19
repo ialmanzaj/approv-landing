@@ -16,7 +16,7 @@ const testimonials = [
     name: "Dayanara",
     role: "Cofundadora",
     company: "Ademsa",
-    avatar: "/images/testimonials/testimonial-1.jpg", // Custom image path
+    avatar: PLACEHOLDER_IMAGES.fallback1, // Use fallback directly
     fallbackAvatar: PLACEHOLDER_IMAGES.fallback1, // Fallback if custom image not found
     industry: "Mantenimiento industrial",
     text: "Con Aprov, redujimos nuestro tiempo de aprobación de mantenimiento de 3 días a menos de una hora—y finalmente tenemos una auditoría adecuada para cada decisión.",
@@ -27,7 +27,7 @@ const testimonials = [
     name: "Brandon M.",
     role: "Director",
     company: "Grupo Inmobiliario BM",
-    avatar: "/images/testimonials/testimonial-2.jpg",
+    avatar: PLACEHOLDER_IMAGES.fallback2,
     fallbackAvatar: PLACEHOLDER_IMAGES.fallback2,
     industry: "Inversión inmobiliaria",
     text: "Aprov realmente se siente como un truco. Puedo hacer más aprobaciones en menos tiempo. Si quieres empezar, tienes que probarlo.",
@@ -38,7 +38,7 @@ const testimonials = [
     name: "James S.",
     role: "Administrador",
     company: "Edificio Mirador",
-    avatar: "/images/testimonials/testimonial-3.jpg",
+    avatar: PLACEHOLDER_IMAGES.fallback3,
     fallbackAvatar: PLACEHOLDER_IMAGES.fallback3,
     industry: "Administración de propiedades",
     text: "De verdad, Aprov ha hecho que el cumplimiento sea mucho más fácil. ¡Nunca pierdo una fecha clave y tengo registros de auditoría al instante!",
