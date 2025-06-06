@@ -67,9 +67,7 @@ export function HeroSection() {
               </Link>
             </div>
 
-            <div className="text-ui mt-4 md:mt-6 text-neutral-500">
-              Sin tarjeta de crédito. Cancela cuando quieras.
-            </div>
+           
 
             <div className="mt-8 md:mt-12 flex items-center space-x-2 text-ui text-neutral-600">
               <div className="flex -space-x-1">

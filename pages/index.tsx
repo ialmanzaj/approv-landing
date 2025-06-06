@@ -16,17 +16,11 @@ export default function HomePage() {
             {/* HERO SECTION */}
             <HeroSection />
 
-            {/* LOGO SECTION */}
-            <LogoSection />
-
-            {/* PROBLEMS SECTION */}
-            <ProblemsSection />
+           <ProblemsSection />
 
             {/* WORKFLOW SECTION */}
             <WorkflowSection />
 
-            {/* FEATURE GRID */}
-          {/*   <FeatureGrid /> */}
 
             {/* TESTIMONIAL GRID */}
             <TestimonialGrid />
