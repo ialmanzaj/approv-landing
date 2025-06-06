@@ -101,8 +101,8 @@ export function ProblemsSection() {
               <div className="text-4xl font-bold text-slate-900 mb-1">-47%</div>
               <div className="text-sm text-slate-600 mb-2">tiempo perdido en promedio</div>
               <a href="#" className="text-xs text-slate-400 flex items-center gap-1.5 hover:text-indigo-500 group transition-colors">
-                <span>Fuente: Harvard Business Review</span>
-                <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+               
+               
               </a>
             </div>
             
@@ -110,8 +110,7 @@ export function ProblemsSection() {
               <div className="text-3xl font-bold text-indigo-600 mb-1">$2.3M</div>
               <div className="text-sm text-indigo-700 mb-2 font-medium">costo anual estimado por empresa</div>
               <a href="#" className="text-xs text-indigo-500 flex items-center gap-1.5 hover:text-indigo-600 group transition-colors">
-                <span>Basado en salarios promedio</span>
-                <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+               
               </a>
             </div>
           </div>
