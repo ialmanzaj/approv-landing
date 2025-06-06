@@ -94,7 +94,7 @@ const AuditTrail = () => (
 
 export function WorkflowSection() {
   return (
-    <section className="py-32">
+    <section className="py-32" id="workflow">
       <div className="max-w-7xl mx-auto px-6">
         
         <div className="text-center max-w-4xl mx-auto mb-28">

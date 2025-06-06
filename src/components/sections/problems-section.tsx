@@ -151,11 +151,7 @@ export function ProblemsSection() {
                   willChange: 'transform, shadow'
                 }}
               >
-                {item.featured && (
-                  <div className="absolute -top-3 -right-3 bg-gradient-to-r from-indigo-500 to-indigo-600 text-white text-xs font-bold px-4 py-2 rounded-full shadow-2xl shadow-indigo-200/80">
-                    Principal
-                </div>
-                )}
+                
                 
                 <div className="p-8">
                   <div className="flex justify-between items-start mb-6">
@@ -216,7 +212,7 @@ export function ProblemsSection() {
             <p className="text-2xl md:text-3xl font-bold text-slate-900 leading-relaxed mb-4">
               Existe una forma más <span className="text-indigo-600 underline decoration-indigo-300/80 decoration-4 underline-offset-4">inteligente</span> de gestionar aprobaciones.
             </p>
-            <a href="#" className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-white bg-indigo-600 rounded-xl hover:bg-indigo-700 transition-all duration-300 shadow-lg shadow-indigo-200/80 group-hover:scale-105 transform">
+            <a href="#workflow" className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-white bg-indigo-600 rounded-xl hover:bg-indigo-700 transition-all duration-300 shadow-lg shadow-indigo-200/80 group-hover:scale-105 transform">
               Descubre cómo funciona
               <ArrowRight className="w-5 h-5 ml-2 transform transition-transform group-hover:translate-x-1" />
             </a>
