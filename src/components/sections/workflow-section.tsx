@@ -24,15 +24,15 @@ const StepCard = ({ step, title, description, benefits, children, isLast = false
       <span className="text-sm font-bold text-indigo-700 bg-indigo-100/80 border border-indigo-200/60 px-4 py-2 rounded-full shadow-lg shadow-indigo-100/60">{step}</span>
       <h3 className="text-4xl font-bold text-slate-900 tracking-tight leading-tight">{title}</h3>
       <p className="text-lg text-slate-600 leading-relaxed">{description}</p>
-      <div className="space-y-3 pt-3 border-t border-slate-200/80">
+      <div className="space-y-4 pt-4 border-t border-slate-200/80">
         {benefits.map((benefit, i) => {
           const Icon = benefit.icon;
           return (
-             <div key={i} className="flex items-center gap-3 group/benefit">
-              <div className="w-7 h-7 flex items-center justify-center bg-whatsapp/10 text-whatsapp rounded-full border border-whatsapp/20 transition-all duration-300 group-hover/benefit:bg-whatsapp/20 group-hover/benefit:scale-110">
-                <Icon className="w-4 h-4" />
+             <div key={i} className="flex items-start gap-3 group/benefit">
+              <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center bg-whatsapp/10 text-whatsapp rounded-full border border-whatsapp/20 mt-1">
+                <Icon className="w-5 h-5" />
               </div>
-              <span className="text-slate-700 font-medium transition-colors duration-300 group-hover/benefit:text-slate-900">{benefit.text}</span>
+              <span className="text-slate-700 font-medium">{benefit.text}</span>
             </div>
           )
         })}
@@ -66,8 +66,8 @@ const ApprovalUI = () => (
 const AuditTrail = () => (
   <div className="bg-slate-50/80 p-6 rounded-2xl">
     <div className="flex items-center gap-4 mb-5">
-       <div className="w-14 h-14 rounded-full bg-emerald-100 flex items-center justify-center border-2 border-emerald-200 shadow-xl shadow-emerald-100/80">
-        <CheckCircle className="w-7 h-7 text-emerald-600" />
+       <div className="w-14 h-14 rounded-full bg-indigo-100 flex items-center justify-center border-2 border-indigo-200 shadow-xl shadow-indigo-100/80">
+        <CheckCircle className="w-7 h-7 text-indigo-600" />
       </div>
       <div>
         <div className="font-bold text-slate-800 text-lg">Solicitud Aprobada</div>
@@ -94,15 +94,15 @@ const AuditTrail = () => (
 
 export function WorkflowSection() {
   return (
-    <section className="py-32" id="workflow">
+    <section className="py-24 sm:py-32" id="workflow">
       <div className="max-w-7xl mx-auto px-6">
         
-        <div className="text-center max-w-4xl mx-auto mb-28">
+        <div className="text-center max-w-4xl mx-auto mb-24">
           <h2 className="text-5xl font-bold text-slate-900 tracking-tight mb-5">Un flujo de trabajo diseñado para la velocidad.</h2>
           <p className="text-xl text-slate-600 leading-relaxed">Sin instalaciones, sin apps complicadas. Solo la eficiencia de las herramientas que ya usas, ahora supercargada para una productividad sin precedentes.</p>
         </div>
         
-        <div className="space-y-32">
+        <div className="space-y-24">
           <StepCard
             step="Paso 1: Iniciar"
             title="Envía la solicitud desde donde estés."

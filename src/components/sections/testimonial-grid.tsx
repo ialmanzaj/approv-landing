@@ -54,13 +54,13 @@ export function TestimonialGrid() {
   return (
     <section className="py-24 sm:py-32 bg-slate-50/80">
       <div className="max-w-7xl mx-auto px-6">
-      <div className="mt-16 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-50/80 border border-indigo-200/60 rounded-full">
-            <div className="w-2 h-2 bg-indigo-500 rounded-full animate-pulse"></div>
-            <span className="text-sm font-medium text-indigo-700">Beta</span>
-          </div>
-        </div>
         <div className="text-center max-w-4xl mx-auto">
+          <div className="mb-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-50/80 border border-indigo-200/60 rounded-full">
+              <div className="w-2 h-2 bg-indigo-500 rounded-full animate-pulse"></div>
+              <span className="text-sm font-medium text-indigo-700">Beta</span>
+            </div>
+          </div>
           <h2 className="text-5xl font-bold text-slate-900 tracking-tight mb-5">
             Nuestros primeros usuarios
           </h2>

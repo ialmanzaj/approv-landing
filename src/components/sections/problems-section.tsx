@@ -8,7 +8,6 @@ import {
   Zap, 
   Eye,
   TrendingDown,
-  ExternalLink,
   ArrowRight
 } from "lucide-react"
 
@@ -18,7 +17,6 @@ const problemItems = [
     title: "Aprobaciones que Toman Semanas",
     description: "Procesos que deberían tomar horas se extienden por días.",
     stat: "4.3 hrs/día",
-    trend: "-32%",
     featured: true
   },
   {
@@ -26,41 +24,36 @@ const problemItems = [
     title: "Solicitudes Perdidas en Múltiples Canales",
     description: "WhatsApp, email, papel... información fragmentada y riesgosa.",
     stat: "67% errores",
-    trend: "+45%",
   },
   {
     icon: MessageCircle,
     title: "Comunicación Ineficiente",
     description: "Ida y vuelta infinita hasta obtener una simple respuesta.",
     stat: "8+ emails",
-    trend: "+120%",
   },
   {
     icon: AlertCircle,
     title: "Proyectos Bloqueados por Aprobaciones",
     description: "Equipos de alto rendimiento esperando decisiones para avanzar.",
     stat: "5+ días",
-    trend: "+67%",
   },
   {
     icon: Zap,
     title: "Respuestas Tardías Críticas",
     description: "Oportunidades de negocio perdidas por lentitud en decisiones.",
     stat: "48+ horas",
-    trend: "+89%",
   },
   {
     icon: Eye,
     title: "Falta de Transparencia en el Proceso",
     description: "Nadie sabe el estado real de las solicitudes importantes.",
     stat: "Sin visibilidad",
-    trend: "N/A",
   }
 ]
 
 export function ProblemsSection() {
   return (
-    <section className="py-28 bg-gradient-to-br from-white via-slate-50/50 to-white relative overflow-hidden">
+    <section className="py-24 sm:py-32 bg-gradient-to-br from-white via-slate-50/50 to-white relative overflow-hidden">
       {/* Finalized background pattern */}
       <div className="absolute inset-0 opacity-[0.02] ">
         <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-slate-300 to-transparent rounded-full blur-3xl opacity-50"></div>
@@ -70,7 +63,7 @@ export function ProblemsSection() {
       
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Finalized header section */}
-        <div className="grid lg:grid-cols-12 gap-12 items-center mb-28">
+        <div className="grid lg:grid-cols-12 gap-12 items-center mb-24">
           <div className="lg:col-span-8">
             {/* Finalized social proof badge */}
             <div className="inline-flex items-center gap-3 px-6 py-3 bg-white/95 backdrop-blur-xl border border-slate-200/80 rounded-2xl text-sm font-medium text-slate-600 mb-8 shadow-xl shadow-slate-100/70">
@@ -118,7 +111,7 @@ export function ProblemsSection() {
 
         {/* Finalized scenario description */}
         <div className="text-center mb-24">
-          <p className="text-2xl md:text-3xl text-slate-700 mb-6 leading-snug max-w-5xl mx-auto font-medium">
+          <p className="text-2xl md:text-3xl text-slate-700 mb-6 leading-tight max-w-5xl mx-auto font-medium">
             <span className="text-indigo-600 font-semibold">Son las 4pm.</span> Tus últimas 3 'revisiones rápidas' de solicitudes pendientes te costaron <span className="text-slate-900 font-semibold underline decoration-indigo-300/80 decoration-4 underline-offset-4">45 minutos...</span>
           </p>
           
@@ -134,7 +127,6 @@ export function ProblemsSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
           {problemItems.map((item, index) => {
             const IconComponent = item.icon;
-            const isNegativeTrend = item.trend.startsWith('+');
             
             return (
               <div
@@ -164,25 +156,13 @@ export function ProblemsSection() {
                     `}>
                       <IconComponent className={`w-8 h-8 ${item.featured ? 'text-indigo-600' : 'text-slate-600'}`} strokeWidth={1.5} />
                     </div>
-                    
-                    {item.trend !== 'N/A' && (
-                      <div className={`
-                        text-xs font-bold px-3 py-2 rounded-full border backdrop-blur-xl
-                        ${isNegativeTrend 
-                          ? 'bg-red-50/90 text-red-700 border-red-200/80 shadow-md shadow-red-100/80' 
-                          : 'bg-emerald-50/90 text-emerald-700 border-emerald-200/80 shadow-md shadow-emerald-100/80'
-                        }
-                      `}>
-                        {item.trend}
-                        </div>
-                      )}
                   </div>
                   
-                  <h3 className="text-xl font-bold text-slate-900 leading-snug mb-3 group-hover:text-indigo-600 transition-colors">
+                  <h3 className="text-xl font-bold text-slate-900 leading-tight mb-3 group-hover:text-indigo-600 transition-colors">
                     {item.title}
                   </h3>
                   
-                  <p className="text-sm text-slate-500 leading-relaxed mb-4 min-h-[40px]">
+                  <p className="text-sm text-slate-600 leading-relaxed mb-4 min-h-[40px]">
                     {item.description}
                   </p>
                   

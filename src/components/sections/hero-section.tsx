@@ -34,61 +34,59 @@ export function HeroSection() {
         {/* Columna izquierda: Texto y CTA */}
         <div className="relative z-10 flex flex-col justify-center px-4 xs:px-6 md:px-12 lg:px-16 py-16 md:py-20">
           <div className="animate-fade-in">
-            <h1 className="text-display text-gray-900">
-              <div>Aprobaciones en <span className="text-blue-600">minutos</span>,</div>
-              <div>no en <span className="text-gray-600">días</span></div>
+            <h1 className="text-display text-slate-900">
+              <div>Aprobaciones en <span className="text-indigo-600">minutos</span>,</div>
+              <div>no en <span className="text-slate-600">días</span></div>
             </h1>
 
-            <p className="text-body text-gray-600 mt-4 md:mt-6 max-w-xl">
+            <p className="text-body text-slate-600 mt-6 max-w-xl">
               Gestiona todas tus aprobaciones por WhatsApp.
               Sin apps nuevas, sin complicaciones.
             </p>
 
-            <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 md:gap-4">
-              <Link href="https://app.aprov.tech" target="_blank" className="w-full sm:max-w-[200px]">
+            <div className="mt-8 flex flex-col sm:flex-row gap-4">
+              <Link href="https://app.aprov.tech" target="_blank">
                 <Button
-                  variant="whatsapp"
+                  variant="default"
                   size="xl"
-                  className="text-ui bg-blue-600 text-white rounded-lg group relative overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl w-full"
+                  className="w-full sm:w-auto text-lg bg-indigo-500 text-white rounded-xl group relative overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl shadow-indigo-200"
                 >
                   <span className="relative z-10">Comenzar gratis</span>
-                  <ArrowRight className="ml-2 h-5 w-5 relative z-10" />
+                  <ArrowRight className="ml-2 h-5 w-5 relative z-10 transition-transform duration-300 group-hover:translate-x-1" />
                 </Button>
               </Link>
 
-              <Link href="https://cal.com/isaac-almanza" target="_blank" className="w-full sm:max-w-[200px]">
+              <Link href="https://cal.com/isaac-almanza" target="_blank">
                 <Button
                   variant="outline"
                   size="xl"
-                  className="text-ui border-neutral-300 w-full text-neutral-700 hover:scale-105 transition-all duration-300"
+                  className="w-full sm:w-auto text-lg border-slate-300 text-slate-700 hover:scale-105 hover:bg-slate-50/50 transition-all duration-300 rounded-xl"
                 >
                   Ver demostración
                 </Button>
               </Link>
             </div>
 
-           
-
-            <div className="mt-8 md:mt-12 flex items-center space-x-2 text-ui text-neutral-600">
-              <div className="flex -space-x-1">
+            <div className="mt-12 flex items-center text-base text-slate-600">
+              <div className="flex -space-x-2">
                 {Array.from({ length: 5 }).map((_, i) => (
                   <div
                     key={i}
-                    className="h-7 w-7 rounded-full bg-neutral-200 border-2 border-white flex items-center justify-center text-[10px] overflow-hidden"
+                    className="h-8 w-8 rounded-full border-2 border-white shadow-md overflow-hidden"
                   >
                     <Image
                       src={`https://randomuser.me/api/portraits/men/${i + 20}.jpg`}
                       alt="User avatar"
-                      width={28}
-                      height={28}
+                      width={32}
+                      height={32}
                     />
                   </div>
                 ))}
               </div>
-              <div>
-                <span className="font-semibold">
+              <div className="ml-3">
+                <span className="font-semibold text-slate-900">
                   {approvalCount.toLocaleString()}
-                </span> aprobaciones completadas hoy
+                </span> aprobaciones completadas
               </div>
             </div>
           </div>
