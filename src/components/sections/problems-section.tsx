@@ -7,115 +7,132 @@ import {
   AlertCircle, 
   Zap, 
   Eye,
-  TrendingDown
+  TrendingDown,
+  ExternalLink,
+  ArrowRight
 } from "lucide-react"
 
 const problemItems = [
   {
     icon: Clock,
-    title: "Horas Perdidas Persiguiendo Aprobaciones",
+    title: "Aprobaciones que Toman Semanas",
+    description: "Procesos que deberían tomar horas se extienden por días.",
     stat: "4.3 hrs/día",
     trend: "-32%",
     featured: true
   },
   {
     icon: Search,
-    title: "Solicitudes Perdidas en el Caos",
+    title: "Solicitudes Perdidas en Múltiples Canales",
+    description: "WhatsApp, email, papel... información fragmentada y riesgosa.",
     stat: "67% errores",
-    trend: "+45%"
+    trend: "+45%",
   },
   {
     icon: MessageCircle,
-    title: "Ida y Vuelta Infinita de Mensajes",
+    title: "Comunicación Ineficiente",
+    description: "Ida y vuelta infinita hasta obtener una simple respuesta.",
     stat: "8+ emails",
-    trend: "+120%"
+    trend: "+120%",
   },
   {
     icon: AlertCircle,
-    title: "Respuestas Lentas que Bloquean Proyectos",
+    title: "Proyectos Bloqueados por Aprobaciones",
+    description: "Equipos de alto rendimiento esperando decisiones para avanzar.",
     stat: "5+ días",
-    trend: "+67%"
+    trend: "+67%",
   },
   {
     icon: Zap,
-    title: "Tiempo de Respuesta Lento",
+    title: "Respuestas Tardías Críticas",
+    description: "Oportunidades de negocio perdidas por lentitud en decisiones.",
     stat: "48+ horas",
-    trend: "+89%"
+    trend: "+89%",
   },
   {
     icon: Eye,
-    title: "Falta de Visibilidad del Estado",
-    stat: "Sin trazabilidad",
-    trend: "N/A"
+    title: "Falta de Transparencia en el Proceso",
+    description: "Nadie sabe el estado real de las solicitudes importantes.",
+    stat: "Sin visibilidad",
+    trend: "N/A",
   }
 ]
 
 export function ProblemsSection() {
   return (
-    <section className="py-24 bg-gradient-to-br from-white via-slate-50/30 to-white relative overflow-hidden">
-      {/* Sophisticated background pattern */}
-      <div className="absolute inset-0 opacity-[0.02]">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-slate-200 to-transparent rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-tl from-indigo-200 to-transparent rounded-full blur-3xl"></div>
+    <section className="py-28 bg-gradient-to-br from-white via-slate-50/50 to-white relative overflow-hidden">
+      {/* Finalized background pattern */}
+      <div className="absolute inset-0 opacity-[0.02] ">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-slate-300 to-transparent rounded-full blur-3xl opacity-50"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-indigo-300 to-transparent rounded-full blur-3xl opacity-50"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-r from-indigo-200 to-slate-200 rounded-full blur-3xl opacity-20"></div>
       </div>
       
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        {/* Header section with asymmetric layout */}
-        <div className="grid lg:grid-cols-12 gap-12 items-center mb-20">
+        {/* Finalized header section */}
+        <div className="grid lg:grid-cols-12 gap-12 items-center mb-28">
           <div className="lg:col-span-8">
-            {/* Premium social proof badge */}
-            <div className="inline-flex items-center gap-3 px-5 py-3 bg-white/80 backdrop-blur-sm border border-slate-200 rounded-2xl text-sm font-medium text-slate-600 mb-8 shadow-sm">
-              <div className="relative">
-                <div className="w-2 h-2 bg-indigo-500 rounded-full animate-pulse"></div>
-                <div className="absolute inset-0 w-2 h-2 bg-indigo-500 rounded-full animate-ping opacity-20"></div>
+            {/* Finalized social proof badge */}
+            <div className="inline-flex items-center gap-3 px-6 py-3 bg-white/95 backdrop-blur-xl border border-slate-200/80 rounded-2xl text-sm font-medium text-slate-600 mb-8 shadow-xl shadow-slate-100/70">
+              <div className="relative flex h-3 w-3">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-indigo-500"></span>
               </div>
               <span className="text-slate-500">Más de</span>
               <span className="font-semibold text-slate-800">10,000 empresas</span>
-              <span className="text-slate-500">pierden tiempo diariamente</span>
+              <span className="text-slate-500">reportan estos problemas</span>
             </div>
 
-            {/* Sophisticated headline with subtle gradient */}
+            {/* Finalized headline */}
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-[0.9] tracking-tight">
               <span className="text-slate-900">El caos de</span><br />
-              <span className="bg-gradient-to-r from-slate-900 via-indigo-700 to-slate-900 bg-clip-text text-transparent">aprobaciones</span><br />
+              <span className="bg-gradient-to-r from-slate-900 via-indigo-500 to-slate-900 bg-clip-text text-transparent drop-shadow-lg">aprobaciones</span><br />
               <span className="text-slate-900">roba tu tiempo.</span>
             </h2>
           </div>
           
-          {/* Premium side stats */}
-          <div className="lg:col-span-4 space-y-6">
-            <div className="bg-white/90 backdrop-blur-sm border border-slate-100 rounded-2xl p-6 shadow-sm">
-              <div className="flex items-center gap-3 mb-2">
+          {/* Finalized side stats */}
+          <div className="lg:col-span-4 space-y-6 group">
+            <div className="bg-white/95 backdrop-blur-xl border border-slate-200/80 rounded-2xl p-6 shadow-xl shadow-slate-100/70 transition-all duration-300 hover:!scale-105 hover:!shadow-2xl hover:!shadow-slate-200/50">
+              <div className="flex items-center gap-3 mb-3">
                 <TrendingDown className="w-5 h-5 text-red-500" />
-                <span className="text-sm text-slate-500 uppercase tracking-wide font-medium">Productividad</span>
+                <span className="text-sm text-slate-500 uppercase tracking-wide font-semibold">Productividad</span>
               </div>
-              <div className="text-3xl font-bold text-slate-900">-47%</div>
-              <div className="text-sm text-slate-600">tiempo perdido en promedio</div>
+              <div className="text-4xl font-bold text-slate-900 mb-1">-47%</div>
+              <div className="text-sm text-slate-600 mb-2">tiempo perdido en promedio</div>
+              <a href="#" className="text-xs text-slate-400 flex items-center gap-1.5 hover:text-indigo-500 group transition-colors">
+                <span>Fuente: Harvard Business Review</span>
+                <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+              </a>
             </div>
             
-            <div className="bg-gradient-to-br from-indigo-50 to-slate-50 border border-indigo-100 rounded-2xl p-6">
-              <div className="text-2xl font-bold text-indigo-700 mb-1">$2.3M</div>
-              <div className="text-sm text-indigo-600">costo anual estimado por empresa</div>
+            <div className="bg-gradient-to-br from-indigo-50/95 to-slate-50/95 backdrop-blur-xl border border-indigo-200/80 rounded-2xl p-6 shadow-2xl shadow-indigo-100/80 transition-all duration-300 hover:!scale-105 hover:!shadow-2xl hover:!shadow-indigo-200/80">
+              <div className="text-3xl font-bold text-indigo-600 mb-1">$2.3M</div>
+              <div className="text-sm text-indigo-700 mb-2 font-medium">costo anual estimado por empresa</div>
+              <a href="#" className="text-xs text-indigo-500 flex items-center gap-1.5 hover:text-indigo-600 group transition-colors">
+                <span>Basado en salarios promedio</span>
+                <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+              </a>
             </div>
           </div>
         </div>
 
-        {/* Premium scenario description */}
-        <div className="text-center mb-16">
-          <p className="text-2xl md:text-3xl text-slate-700 mb-6 leading-relaxed max-w-5xl mx-auto font-medium">
-            <span className="text-indigo-600 font-semibold">Son las 4pm.</span> Tus últimas 3 'revisiones rápidas' de solicitudes pendientes te costaron <span className="text-slate-900 font-semibold">45 minutos...</span>
+        {/* Finalized scenario description */}
+        <div className="text-center mb-24">
+          <p className="text-2xl md:text-3xl text-slate-700 mb-6 leading-snug max-w-5xl mx-auto font-medium">
+            <span className="text-indigo-600 font-semibold">Son las 4pm.</span> Tus últimas 3 'revisiones rápidas' de solicitudes pendientes te costaron <span className="text-slate-900 font-semibold underline decoration-indigo-300/80 decoration-4 underline-offset-4">45 minutos...</span>
           </p>
           
           <div className="relative max-w-4xl mx-auto">
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-50/30 to-transparent rounded-2xl"></div>
-            <p className="text-lg text-slate-600 py-6 px-8 relative">
-              Mientras tanto, <span className="font-semibold text-slate-800">12 nuevas solicitudes</span> esperan tu atención y el equipo pregunta por actualizaciones.
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-50/50 to-transparent rounded-3xl"></div>
+            <p className="text-lg text-slate-600 py-8 px-8 relative leading-relaxed">
+              Mientras tanto, <span className="font-semibold text-slate-800 bg-slate-200/70 px-2 py-1.5 rounded-lg">12 nuevas solicitudes</span> esperan tu atención y el equipo pregunta por actualizaciones <span className="font-semibold">cada 30 minutos.</span>
             </p>
           </div>
         </div>
 
-        {/* Premium problem cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        {/* Finalized problem cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
           {problemItems.map((item, index) => {
             const IconComponent = item.icon;
             const isNegativeTrend = item.trend.startsWith('+');
@@ -124,59 +141,61 @@ export function ProblemsSection() {
               <div
                 key={index}
                 className={`
-                  group relative bg-white/80 backdrop-blur-sm rounded-3xl border transition-all duration-300 hover:shadow-xl hover:-translate-y-1
+                  group relative bg-white/95 backdrop-blur-xl rounded-3xl border transition-all duration-300 hover:shadow-2xl hover:-translate-y-2
                   ${item.featured 
-                    ? 'border-indigo-200 shadow-lg md:scale-105 lg:row-span-1 bg-gradient-to-br from-white to-indigo-50/30' 
-                    : 'border-slate-100 shadow-sm hover:border-slate-200'
+                    ? 'border-indigo-200/80 shadow-2xl shadow-indigo-100/80 md:scale-105 bg-gradient-to-br from-white to-indigo-50/50' 
+                    : 'border-slate-200/80 shadow-xl shadow-slate-100/70 hover:border-slate-300/80'
                   }
                 `}
                 style={{
-                  animationDelay: `${index * 100}ms`
+                  animationDelay: `${index * 120}ms`,
+                  willChange: 'transform, shadow'
                 }}
               >
                 {item.featured && (
-                  <div className="absolute -top-2 -right-2 bg-indigo-600 text-white text-xs font-medium px-3 py-1 rounded-full shadow-sm">
+                  <div className="absolute -top-3 -right-3 bg-gradient-to-r from-indigo-500 to-indigo-600 text-white text-xs font-bold px-4 py-2 rounded-full shadow-2xl shadow-indigo-200/80">
                     Principal
                   </div>
                 )}
                 
                 <div className="p-8">
-                  {/* Premium icon treatment */}
                   <div className="flex justify-between items-start mb-6">
                     <div className={`
-                      w-14 h-14 rounded-2xl flex items-center justify-center transition-all duration-300
+                      w-16 h-16 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110
                       ${item.featured 
-                        ? 'bg-gradient-to-br from-indigo-100 to-indigo-200 group-hover:from-indigo-200 group-hover:to-indigo-300' 
-                        : 'bg-slate-100 group-hover:bg-slate-200'
+                        ? 'bg-gradient-to-br from-indigo-100 to-indigo-200 group-hover:from-indigo-200 group-hover:to-indigo-300 shadow-xl shadow-indigo-100/80' 
+                        : 'bg-slate-100 group-hover:bg-slate-200 shadow-lg shadow-slate-100/80'
                       }
                     `}>
-                      <IconComponent className={`w-7 h-7 ${item.featured ? 'text-indigo-600' : 'text-slate-600'}`} strokeWidth={1.5} />
+                      <IconComponent className={`w-8 h-8 ${item.featured ? 'text-indigo-600' : 'text-slate-600'}`} strokeWidth={1.5} />
                     </div>
                     
-                    {/* Sophisticated trend indicators */}
                     {item.trend !== 'N/A' && (
                       <div className={`
-                        text-xs font-medium px-3 py-1 rounded-full
+                        text-xs font-bold px-3 py-2 rounded-full border backdrop-blur-xl
                         ${isNegativeTrend 
-                          ? 'bg-red-50 text-red-600 border border-red-100' 
-                          : 'bg-emerald-50 text-emerald-600 border border-emerald-100'
+                          ? 'bg-red-50/90 text-red-700 border-red-200/80 shadow-md shadow-red-100/80' 
+                          : 'bg-emerald-50/90 text-emerald-700 border-emerald-200/80 shadow-md shadow-emerald-100/80'
                         }
                       `}>
                         {item.trend}
                       </div>
                     )}
                   </div>
-
-                  {/* Content */}
-                  <h3 className="text-xl font-bold text-slate-900 leading-tight mb-4 group-hover:text-slate-800 transition-colors">
+                  
+                  <h3 className="text-xl font-bold text-slate-900 leading-snug mb-3 group-hover:text-indigo-600 transition-colors">
                     {item.title}
                   </h3>
                   
+                  <p className="text-sm text-slate-500 leading-relaxed mb-4 min-h-[40px]">
+                    {item.description}
+                  </p>
+                  
                   <div className={`
-                    text-sm font-semibold px-4 py-2 rounded-xl inline-block
+                    text-base font-semibold px-4 py-2.5 rounded-xl inline-block border backdrop-blur-xl
                     ${item.featured 
-                      ? 'bg-indigo-100 text-indigo-700 border border-indigo-200' 
-                      : 'bg-slate-100 text-slate-700 border border-slate-200'
+                      ? 'bg-indigo-100/90 text-indigo-700 border-indigo-200/80 shadow-md shadow-indigo-100/80' 
+                      : 'bg-slate-100/90 text-slate-700 border-slate-200/80 shadow-md shadow-slate-100/80'
                     }
                   `}>
                     {item.stat}
@@ -187,16 +206,21 @@ export function ProblemsSection() {
           })}
         </div>
 
-        {/* Premium transition section */}
-        <div className="text-center">
-          <div className="max-w-3xl mx-auto bg-gradient-to-r from-slate-50 to-white rounded-3xl p-8 border border-slate-100 shadow-sm">
-            <p className="text-xl text-slate-600 mb-4">
-              ¿Te suena familiar? <span className="font-semibold text-slate-800">No estás solo.</span>
+        {/* Finalized transition section */}
+        <div className="text-center group">
+          <div className="max-w-4xl mx-auto bg-gradient-to-br from-slate-100/90 to-white/95 backdrop-blur-xl rounded-3xl p-10 border border-slate-200/80 shadow-2xl shadow-slate-200/80">
+            <p className="text-xl text-slate-600 mb-6 leading-relaxed">
+              ¿Te suena familiar? <span className="font-semibold text-slate-800">No estás solo.</span><br />
+              <span className="text-lg text-slate-500">Miles de empresas enfrentan estos mismos desafíos cada día.</span>
             </p>
-            <div className="w-16 h-1 bg-gradient-to-r from-indigo-400 to-indigo-600 rounded-full mx-auto mb-4"></div>
-            <p className="text-2xl font-bold text-slate-900 leading-relaxed">
-              Existe una forma más <span className="text-indigo-600">inteligente</span> de gestionar aprobaciones.
+            <div className="w-24 h-1.5 bg-gradient-to-r from-indigo-400 via-indigo-500 to-indigo-400 rounded-full mx-auto mb-6 shadow-2xl shadow-indigo-200/80"></div>
+            <p className="text-2xl md:text-3xl font-bold text-slate-900 leading-relaxed mb-4">
+              Existe una forma más <span className="text-indigo-600 underline decoration-indigo-300/80 decoration-4 underline-offset-4">inteligente</span> de gestionar aprobaciones.
             </p>
+            <a href="#" className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-white bg-indigo-600 rounded-xl hover:bg-indigo-700 transition-all duration-300 shadow-lg shadow-indigo-200/80 group-hover:scale-105 transform">
+              Descubre cómo funciona
+              <ArrowRight className="w-5 h-5 ml-2 transform transition-transform group-hover:translate-x-1" />
+            </a>
           </div>
         </div>
       </div>
