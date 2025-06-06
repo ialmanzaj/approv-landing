@@ -1,6 +1,6 @@
 "use client"
 
-import { 
+import {
   Clock, 
   Search, 
   MessageCircle, 
@@ -81,7 +81,7 @@ export function ProblemsSection() {
               <span className="text-slate-500">Más de</span>
               <span className="font-semibold text-slate-800">10,000 empresas</span>
               <span className="text-slate-500">reportan estos problemas</span>
-            </div>
+        </div>
 
             {/* Finalized headline */}
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-[0.9] tracking-tight">
@@ -97,7 +97,7 @@ export function ProblemsSection() {
               <div className="flex items-center gap-3 mb-3">
                 <TrendingDown className="w-5 h-5 text-red-500" />
                 <span className="text-sm text-slate-500 uppercase tracking-wide font-semibold">Productividad</span>
-              </div>
+        </div>
               <div className="text-4xl font-bold text-slate-900 mb-1">-47%</div>
               <div className="text-sm text-slate-600 mb-2">tiempo perdido en promedio</div>
               <a href="#" className="text-xs text-slate-400 flex items-center gap-1.5 hover:text-indigo-500 group transition-colors">
@@ -146,7 +146,7 @@ export function ProblemsSection() {
                     : 'border-slate-200/80 shadow-xl shadow-slate-100/70 hover:border-slate-300/80'
                   }
                 `}
-                style={{
+                style={{ 
                   animationDelay: `${index * 120}ms`,
                   willChange: 'transform, shadow'
                 }}
@@ -154,7 +154,7 @@ export function ProblemsSection() {
                 {item.featured && (
                   <div className="absolute -top-3 -right-3 bg-gradient-to-r from-indigo-500 to-indigo-600 text-white text-xs font-bold px-4 py-2 rounded-full shadow-2xl shadow-indigo-200/80">
                     Principal
-                  </div>
+                </div>
                 )}
                 
                 <div className="p-8">
@@ -178,8 +178,8 @@ export function ProblemsSection() {
                         }
                       `}>
                         {item.trend}
-                      </div>
-                    )}
+                        </div>
+                      )}
                   </div>
                   
                   <h3 className="text-xl font-bold text-slate-900 leading-snug mb-3 group-hover:text-indigo-600 transition-colors">
@@ -204,7 +204,7 @@ export function ProblemsSection() {
             );
           })}
         </div>
-
+        
         {/* Finalized transition section */}
         <div className="text-center group">
           <div className="max-w-4xl mx-auto bg-gradient-to-br from-slate-100/90 to-white/95 backdrop-blur-xl rounded-3xl p-10 border border-slate-200/80 shadow-2xl shadow-slate-200/80">

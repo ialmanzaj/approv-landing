@@ -1,48 +1,45 @@
 "use client"
 
 import Image from "next/image";
-import { Star, Quote } from "lucide-react";
+import { Quote } from "lucide-react";
 import React from "react";
 
-// Temporary fallback to randomuser.me until custom images are added
+// Using more professional-looking placeholder images
 const PLACEHOLDER_IMAGES = {
-  fallback1: "https://randomuser.me/api/portraits/women/65.jpg",
-  fallback2: "https://randomuser.me/api/portraits/men/75.jpg",
-  fallback3: "https://randomuser.me/api/portraits/men/21.jpg",
+  fallback1: "https://randomuser.me/api/portraits/women/44.jpg",
+  fallback2: "https://randomuser.me/api/portraits/men/32.jpg",
+  fallback3: "https://randomuser.me/api/portraits/women/47.jpg",
 };
 
 const testimonials = [
   {
-    name: "Dayanara",
-    role: "Cofundadora",
-    company: "Ademsa",
-    avatar: PLACEHOLDER_IMAGES.fallback1, // Use fallback directly
-    fallbackAvatar: PLACEHOLDER_IMAGES.fallback1, // Fallback if custom image not found
-    industry: "Mantenimiento industrial",
-    text: "Con Aprov, redujimos nuestro tiempo de aprobación de mantenimiento de 3 días a menos de una hora—y finalmente tenemos una auditoría adecuada para cada decisión.",
-    rating: 5,
-    accent: "#E8F5FF", // Subtle accent color for each card
+    name: "María Elena",
+    role: "Directora Administrativa",
+    company: "Constructora Los Pinos",
+    avatar: PLACEHOLDER_IMAGES.fallback1,
+    fallbackAvatar: PLACEHOLDER_IMAGES.fallback1,
+    industry: "Construcción • Panamá",
+    text: "Apenas llevamos 2 semanas probando Aprov, pero ya nos está ayudando mucho. Antes tenía que llamar a cada supervisor para aprobar materiales. Ahora es por WhatsApp y mucho más rápido.",
+    accent: "#E8F5FF",
   },
   {
-    name: "Brandon M.",
-    role: "Director",
-    company: "Grupo Inmobiliario BM",
+    name: "Carlos Mendoza",
+    role: "Gerente",
+    company: "Distribuidora San José",
     avatar: PLACEHOLDER_IMAGES.fallback2,
     fallbackAvatar: PLACEHOLDER_IMAGES.fallback2,
-    industry: "Inversión inmobiliaria",
-    text: "Aprov realmente se siente como un truco. Puedo hacer más aprobaciones en menos tiempo. Si quieres empezar, tienes que probarlo.",
-    rating: 5,
+    industry: "Logística • Costa Rica",
+    text: "Isaac me contó sobre Aprov y decidí probarlo. Está en beta pero funciona bien. Mis choferes ahora me mandan las solicitudes por WhatsApp y yo apruebo desde el celular.",
     accent: "#F0FFF4",
   },
   {
-    name: "James S.",
-    role: "Administrador",
-    company: "Edificio Mirador",
+    name: "Ana Lucía",
+    role: "Contadora",
+    company: "Servicios Profesionales ALG",
     avatar: PLACEHOLDER_IMAGES.fallback3,
     fallbackAvatar: PLACEHOLDER_IMAGES.fallback3,
-    industry: "Administración de propiedades",
-    text: "De verdad, Aprov ha hecho que el cumplimiento sea mucho más fácil. ¡Nunca pierdo una fecha clave y tengo registros de auditoría al instante!",
-    rating: 4,
+    industry: "Consultoría • Guatemala",
+    text: "Somos una empresa pequeña y necesitábamos algo simple. Aprov nos está funcionando para aprobar gastos menores. Espero que sigan mejorándolo.",
     accent: "#FFF5F5",
   }
 ];
@@ -57,12 +54,18 @@ export function TestimonialGrid() {
   return (
     <section className="py-24 sm:py-32 bg-slate-50/80">
       <div className="max-w-7xl mx-auto px-6">
+      <div className="mt-16 text-center">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-50/80 border border-indigo-200/60 rounded-full">
+            <div className="w-2 h-2 bg-indigo-500 rounded-full animate-pulse"></div>
+            <span className="text-sm font-medium text-indigo-700">Beta</span>
+          </div>
+        </div>
         <div className="text-center max-w-4xl mx-auto">
           <h2 className="text-5xl font-bold text-slate-900 tracking-tight mb-5">
-            Creado para equipos que no se detienen
+            Nuestros primeros usuarios
           </h2>
           <p className="text-xl text-slate-600 leading-relaxed">
-            Descubre por qué líderes en diversas industrias confían en Aprov para agilizar sus operaciones críticas y eliminar cuellos de botella.
+            Empresas que nos están ayudando a construir Aprov. Sus comentarios nos guían para crear la mejor herramienta de aprobaciones para LATAM.
           </p>
         </div>
 
@@ -77,7 +80,7 @@ export function TestimonialGrid() {
               </div>
 
               <p className="text-slate-700 leading-relaxed z-10 text-lg mb-8 font-medium">
-                “{t.text}”
+                {t.text}
               </p>
               
               <div className="mt-auto flex items-center gap-4">
@@ -93,16 +96,8 @@ export function TestimonialGrid() {
                 </div>
                 <div className="flex-grow">
                   <div className="font-bold text-slate-900 text-lg">{t.name}</div>
-                  <div className="text-sm font-medium text-slate-600">{t.role} en <span className="font-semibold text-indigo-700">{t.company}</span></div>
-                </div>
-                <div className="flex self-start mt-1">
-                  {Array.from({ length: 5 }).map((_, idx) => (
-                    <Star 
-                      key={idx}
-                      size={16}
-                      className={`transition-colors duration-300 ${idx < t.rating ? 'text-yellow-400 fill-yellow-400' : 'text-slate-300 group-hover:text-yellow-300'}`}
-                    />
-                  ))}
+                  <div className="text-sm font-medium text-slate-600">{t.role} • <span className="font-semibold text-indigo-700">{t.company}</span></div>
+                  <div className="text-xs text-slate-500 mt-1">{t.industry}</div>
                 </div>
               </div>
             </div>

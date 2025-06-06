@@ -8,6 +8,16 @@ const nextConfig = {
         hostname: 'randomuser.me',
         pathname: '**',
       },
+      {
+        protocol: 'https',
+        hostname: 'images.uifaces.co',
+        pathname: '**',
+      },
+      {
+        protocol: 'https' ,
+        hostname: 'i.pravatar.cc',
+        pathname: '**',
+      }
     ],
   },
 }
