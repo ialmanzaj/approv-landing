@@ -75,15 +75,15 @@ export function TestimonialGrid() {
               key={i}
               className="relative bg-white/60 backdrop-blur-xl border border-slate-200/50 rounded-3xl shadow-2xl shadow-slate-200/60 p-8 flex flex-col transition-all duration-300 hover:scale-[1.03] hover:shadow-slate-300/80 group"
             >
-              <div className="absolute top-8 right-8 text-slate-200/70 transition-colors duration-300 group-hover:text-indigo-200/60">
-                <Quote size={40} strokeWidth={1.5} />
+              <div className="absolute -top-4 -left-4 text-slate-100/80 transition-transform duration-500 group-hover:scale-110 group-hover:text-indigo-100/80" style={{ zIndex: 0 }}>
+                <Quote size={80} strokeWidth={1} fill="currentColor" />
               </div>
 
-              <p className="text-slate-700 leading-relaxed z-10 text-lg mb-8 font-medium">
+              <blockquote className="relative text-slate-700 leading-relaxed z-10 text-lg mb-8 font-medium">
                 {t.text}
-              </p>
+              </blockquote>
               
-              <div className="mt-auto flex items-center gap-4">
+              <div className="relative mt-auto flex items-center gap-4 z-10">
                 <div className="relative h-14 w-14 rounded-full overflow-hidden border-2 border-white shadow-lg">
                   <Image 
                     src={imageErrors[i] ? t.fallbackAvatar : t.avatar} 

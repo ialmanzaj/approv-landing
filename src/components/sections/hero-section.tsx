@@ -29,22 +29,20 @@ export function HeroSection() {
       {/* Fondo con patrón sutil */}
       <div className="absolute inset-0 bg-neutral-50 bg-hero-pattern opacity-5 z-0" />
       
-      {/* Container with max-width for extra large screens */}
-      <div className="mx-auto max-w-screen-2xl w-full min-h-[90vh] grid grid-cols-1 lg:grid-cols-2">
-        {/* Columna izquierda: Texto y CTA */}
-        <div className="relative z-10 flex flex-col justify-center px-4 xs:px-6 md:px-12 lg:px-16 py-16 md:py-20">
+      {/* Centered single-column layout */}
+      <div className="mx-auto max-w-7xl w-full min-h-screen flex items-center justify-center">
+        <div className="relative z-10 flex flex-col justify-center items-center text-center px-4 sm:px-6 lg:px-8 py-16 md:py-20">
           <div className="animate-fade-in">
-            <h1 className="text-display text-slate-900">
-              <div>Aprobaciones en <span className="text-indigo-600">minutos</span>,</div>
-              <div>no en <span className="text-slate-600">días</span></div>
+            <h1 className="text-5xl md:text-6xl font-bold text-slate-900 tracking-tight">
+              <div>De <span className="text-slate-600">3 días</span> a <span className="text-indigo-600">3 minutos</span></div>
+              <div>Acelera tus aprobaciones</div>
             </h1>
 
-            <p className="text-body text-slate-600 mt-6 max-w-xl">
-              Gestiona todas tus aprobaciones por WhatsApp.
-              Sin apps nuevas, sin complicaciones.
+            <p className="text-lg md:text-xl text-slate-600 mt-6 max-w-3xl mx-auto">
+              Aprueba documentos en 2 pasos desde <span className="text-green-500 font-semibold">WhatsApp</span>. Tu equipo avanza, tú mantienes el control.
             </p>
 
-            <div className="mt-8 flex flex-col sm:flex-row gap-4">
+            <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
               <Link href="https://app.aprov.tech" target="_blank">
                 <Button
                   variant="default"
@@ -67,8 +65,8 @@ export function HeroSection() {
               </Link>
             </div>
 
-            <div className="mt-12 flex items-center text-base text-slate-600">
-              <div className="flex -space-x-2">
+            <div className="mt-16 group flex flex-col sm:flex-row items-center justify-center text-base text-slate-600">
+              <div className="flex -space-x-2 transition-transform duration-300 group-hover:scale-105">
                 {Array.from({ length: 5 }).map((_, i) => (
                   <div
                     key={i}
@@ -83,27 +81,12 @@ export function HeroSection() {
                   </div>
                 ))}
               </div>
-              <div className="ml-3">
-                <span className="font-semibold text-slate-900">
+              <div className="ml-0 sm:ml-4 mt-3 sm:mt-0 transition-colors duration-300 group-hover:text-slate-800">
+                <span className="font-bold text-slate-900">
                   {approvalCount.toLocaleString()}
-                </span> aprobaciones completadas
+                </span><span className="text-slate-500"> aprobaciones completadas</span>
               </div>
             </div>
-          </div>
-
-          {/* Flecha para pantallas pequeñas que indica contenido abajo */}
-          <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 md:hidden">
-            <ArrowDown className="h-6 w-6 text-neutral-400 animate-bounce" />
-          </div>
-        </div>
-
-        {/* Columna derecha: Visualización interactiva */}
-        <div className="relative z-10 flex justify-center items-center px-4 xs:px-6 py-8 sm:py-12 md:py-0 md:px-8 lg:px-12 h-[500px] sm:h-auto">
-          {/* Dispositivo móvil estilo iPhone con componentes */}
-          <div className="transform scale-90 sm:scale-100 md:scale-[0.85] lg:scale-90 xl:scale-100 2xl:scale-110">
-            <PhoneFrame>
-              <WhatsAppInterface showChat={showChat} />
-            </PhoneFrame>
           </div>
         </div>
       </div>

@@ -10,6 +10,7 @@ import {
   TrendingDown,
   ArrowRight
 } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 const problemItems = [
   {
@@ -77,7 +78,7 @@ export function ProblemsSection() {
         </div>
 
             {/* Finalized headline */}
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-[0.9] tracking-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-[0.9] tracking-tight">
               <span className="text-slate-900">El caos de</span><br />
               <span className="bg-gradient-to-r from-slate-900 via-indigo-500 to-slate-900 bg-clip-text text-transparent drop-shadow-lg">aprobaciones</span><br />
               <span className="text-slate-900">roba tu tiempo.</span>
@@ -192,10 +193,12 @@ export function ProblemsSection() {
             <p className="text-2xl md:text-3xl font-bold text-slate-900 leading-relaxed mb-4">
               Existe una forma más <span className="text-indigo-600 underline decoration-indigo-300/80 decoration-4 underline-offset-4">inteligente</span> de gestionar aprobaciones.
             </p>
-            <a href="#workflow" className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-white bg-indigo-600 rounded-xl hover:bg-indigo-700 transition-all duration-300 shadow-lg shadow-indigo-200/80 group-hover:scale-105 transform">
-              Descubre cómo funciona
-              <ArrowRight className="w-5 h-5 ml-2 transform transition-transform group-hover:translate-x-1" />
-            </a>
+            <Button asChild size="lg" className="group-hover:scale-105 transform transition-transform duration-300">
+              <a href="#workflow" className="inline-flex items-center justify-center">
+                Descubre cómo funciona
+                <ArrowRight className="w-5 h-5 ml-2 transform transition-transform group-hover:translate-x-1" />
+              </a>
+            </Button>
           </div>
         </div>
       </div>
